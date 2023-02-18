@@ -1,0 +1,190 @@
+
+
+.slider__card {
+    img {
+        display: block;
+        border-radius: 24px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        
+    }
+    min-width: 200px;
+    padding: 0 10px;
+
+}
+
+.slider__card-mod {
+    position: relative;
+}
+
+.slider__card-mod--popular{
+    &:after {
+        content: 'popular';
+        width:max-content;
+
+        background-color: #FEE2E2;
+        background-image: url('/img/svg/fire-icon.svg');
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+        background-position: 3px 2px;
+
+        border-radius: 32px;
+        padding: 2% 5%;
+        padding-left: 9%;
+
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        text-transform: capitalize;
+        color: #EF4444;
+       
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        
+        
+    }
+
+
+}
+
+.slider__card-mod--new{
+    &:after {
+        content: 'new house';
+        width:max-content;
+        
+        background-color: #DBEAFE;
+        background-image: url('/img/svg/ph_house-fill-blue.svg');
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+        background-position: 3px 2px;
+
+        border-radius: 32px;
+        padding: 2% 5%;
+        padding-left: 9%;
+
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        text-transform: capitalize;
+        color: #1D4ED8;
+       
+        position: absolute;
+        bottom: 10px;
+        left: 10px;  
+    }
+}
+
+.slider__card-mod--best{
+    &:after {
+        content: 'best deals';
+        width:max-content;
+        
+        background-color: #D1FAE5;
+        background-image: url('/img/svg/wallet-icon.svg');
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+        background-position: 4px 2.5px;
+
+        border-radius: 32px;
+        padding: 2% 5%;
+        padding-left: 10%;
+
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        text-transform: capitalize;
+        color: #047857;
+       
+        position: absolute;
+        bottom: 10px;
+        left: 10px;  
+    }
+}
+
+.slider__slide-container {
+    min-width: 220px;
+    padding-top: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.slider__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0E1735;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+}
+
+.slider__price {
+    font-size: 12px;
+    line-height: 18px;
+    color: #3C4563;
+    margin: 0;
+}
+
+.slider__saller {
+    display: flex;
+}
+
+.slider {
+    .slider__item--1 {
+        transform: translateX(-100%);
+    }
+    .slider__item--2 {
+        transform: translateX(0%);
+    }
+    .slider__item--3 {
+        transform: translateX(100%);
+    }
+}
+
+.slider__button-container {
+    display: flex;
+}
+
+.slider__toggle-svg--left {
+    transform: rotate(180deg);
+}
+
+@media (min-width: 1200px) {
+    .slider__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .slider__slide-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            display: none;
+          }
+    }
+
+    .slider__card {
+        min-width: auto;
+        margin-right: 30px;
+    }
+
+    .slider__img {
+        width: auto;
+    }
+
+    .slider__title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .slider__price {
+        font-size: 20px;
+        line-height: 32px; 
+    }
+
+    
+    
+}

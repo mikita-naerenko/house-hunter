@@ -1,0 +1,22 @@
+.dots {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+
+}
+
+.dots__dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #cdd0d7;
+}
+
+.dots__dot--active {
+    background-color: #3C4563;
+}

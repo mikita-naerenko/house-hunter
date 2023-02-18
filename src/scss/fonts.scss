@@ -1,0 +1,33 @@
+@font-face {
+	font-family:
+                    Lexend;
+	font-display: swap;
+	src:
+               url("../fonts/Lexend-Bold.woff2") format("woff2"),
+               url("../fonts/Lexend-Bold.woff") format("woff");
+	font-weight:
+               700;
+	font-style: bold;
+}
+@font-face {
+	font-family:
+                    Lexend;
+	font-display: swap;
+	src:
+               url("../fonts/Lexend-Regular.woff2") format("woff2"),
+               url("../fonts/Lexend-Regular.woff") format("woff");
+	font-weight:
+               400;
+	font-style: normal;
+}
+@font-face {
+	font-family:
+                    Lexend;
+	font-display: swap;
+	src:
+               url("../fonts/Lexend-SemiBold.woff2") format("woff2"),
+               url("../fonts/Lexend-SemiBold.woff") format("woff");
+	font-weight:
+               500;
+	font-style: normal;
+}

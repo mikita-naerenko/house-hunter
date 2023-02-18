@@ -1,0 +1,117 @@
+.saller {
+    display: flex;
+    align-items:center;
+    padding: 10px 0;
+
+    img {
+
+        margin-right: 10px;
+        display: block;
+        border-radius: 24px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+}
+
+.saller--review {
+    justify-content: space-between;
+}
+
+.saller__name {
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    color: #0E1735;
+}
+
+.saller__text {
+    display: block;
+    font-size: 10px;
+    line-height: 12px;
+    color: #888B97;
+}
+
+.saller__grade {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #3C4563;
+
+    margin-left: 15px;
+    position: relative;
+
+    &::before {
+        content: url('/img/svg/star-icon.svg');
+        display: block;
+        transform: scale(0.5);
+        position: absolute;
+        top: -5px;
+        left: -20px;
+
+    }
+}
+
+.saller--article-preview {
+    margin: 0;
+    padding: 0;
+
+    img {
+        width: 20px;
+    }
+    a {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 22px;
+        color: #3C4563;
+        opacity: 0.8;
+    }
+}
+
+@media (min-width: 720px) {
+    .saller--room-tour {
+        margin-top: 20px;
+    }
+
+    .saller--review {
+        justify-content: center;
+
+        .slide__wrapper {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+
+    .saller--article-preview {
+
+        margin-top: 3%;
+        margin-bottom: 4%;
+        img {
+            width: 40px;
+            margin-right: 0;
+        }
+
+        a {
+            font-size: 14px;
+            line-height: 22px;
+            margin-left: 10px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .saller {
+        img {
+            width: 40px;
+            height: auto;
+        }
+    }
+
+    .saller__name {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .saller__text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}

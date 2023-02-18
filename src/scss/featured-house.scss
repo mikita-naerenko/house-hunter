@@ -1,0 +1,97 @@
+.featured-house {
+    position: relative;
+}
+
+// .featured-house > span {
+// color: #F59E0B;
+// font-size: 10px;
+// position: absolute;
+// top: -20px;
+// left: 50px;
+
+// &::before {
+//     content: '';
+// width: 32px;
+// height: 1px;
+// background-color: #F59E0B;
+
+// position: absolute;
+// top: 12px;
+// left: -35px;
+// }
+// }
+
+
+
+.featured-house__input-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.featured-house__svg {
+    display: block;
+    margin-right: 5px;
+    
+}
+
+.featured-house__radio:checked + .featured-house__button {
+    background: #D1FAE5;
+    color: #10B981;
+    border: #D1FAE5;
+
+    .featured-house__svg path{
+        fill:#10B981
+    }
+}
+
+.featured-house__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: capitalize;
+    color: #1B1C57;
+
+    margin-left: 10%;
+}
+
+@media (min-width: 720px) {
+    .featured-house__title {
+        margin-left: 6.5%;
+    }
+
+    .featured-house__input-list {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        width: 496px;
+    }
+
+    .featured-house__svg {
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+        margin-top: 3px;
+        
+    }
+}
+
+@media (min-width: 1200px) {
+    .featured-house__title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .featured-house__input-list {
+        justify-content: space-around;
+
+        width: 450px;
+    }
+
+    .featured-house__svg {
+        margin-top: 6px;
+    }
+}

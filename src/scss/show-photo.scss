@@ -1,0 +1,40 @@
+@media (min-width: 720px) {
+.show-photo {
+    
+}
+
+.show-photo__wrapper {
+    display: flex;
+    align-items:flex-end;
+    margin-top: -18%;
+}
+
+ .show-photo__item {
+    display: block;
+    width: auto;
+    height: 50%;
+    margin-right: 2%;
+}   
+.show-photo__item--next{
+    width: 45%;
+    height: auto;
+
+    
+}
+
+.show-photo__item--main {
+    width: 85%;
+    height: auto;
+    margin: 0;
+    margin-left: 7%;
+
+    
+    
+}   
+}
+
+@media (min-width: 1200px) {
+    
+}
+
+

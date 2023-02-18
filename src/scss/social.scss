@@ -1,0 +1,15 @@
+.social {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.social__item {
+    margin-right: 15px;
+}
+
+@media (min-width: 720px) {
+    .social {
+        justify-content: flex-start;
+    }
+}

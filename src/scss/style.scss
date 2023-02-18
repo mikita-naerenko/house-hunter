@@ -1,0 +1,89 @@
+@import "fonts.scss";
+@import "variables.scss";
+@import "header.scss";
+@import "container.scss";
+@import "normalize.scss";
+@import "nav.scss";
+@import "drop-down.scss";
+@import "logo.scss";
+@import "progress-list.scss";
+@import "button.scss";
+@import "search-panel.scss";
+@import "partnership.scss";
+@import "featured-house.scss";
+@import "slider.scss";
+@import "saller.scss";
+@import "style-element.scss";
+@import "room-tour.scss";
+@import "review.scss";
+@import "dots.scss";
+@import "articles.scss";
+@import "cta.scss";
+@import "cta-inputs.scss";
+@import "footer.scss";
+@import "social.scss";
+@import "show-photo.scss";
+
+body {
+    // background-color: #f1f1f1;
+    // overflow-x: hidden;
+    // position: relative;
+    // background-image: url('/img/svg/bg-header-1.svg'), url('/img/svg/bg-header-2.svg'),;
+    // background-repeat:no-repeat;
+    // background-position: top left, top left;
+    // background-size: 60%;
+    
+    // &::before {
+    //     content: '';
+    //     width: 50vh;
+    //     height: 50vh;
+    //     position: absolute;
+    //     background-image: url('/img/svg/bg-header-2.svg'), url('/img/svg/bg-header-1.svg');
+    //     background-repeat:no-repeat;
+    //     z-index: -1;
+    //     background-position: -25% -20%, right -20%;
+    //     background-size: 80%;
+    //     top: -10%;
+    //     left: -10%;
+        
+    // }
+
+}
+
+ul,a {
+    list-style: none;
+    color: inherit;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.global {
+    font-family: 'Lexend', arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    
+}
+
+.hidden {
+    display: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  @media (min-width: 720px) {
+    
+  }

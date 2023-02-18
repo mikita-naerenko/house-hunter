@@ -1,0 +1,71 @@
+
+.container__wrapper{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container {
+    padding: 2%;
+    
+}
+
+.container__footer {
+    background-image: url('/img/svg/bg-footer-1.svg'), url('/img/svg/bg-footer-2.svg'),;
+    background-repeat:no-repeat;
+    background-position: 50% 40px, 80% 20px;
+    background-size: 130%;
+}
+
+.container__room-tour {
+    background-image: url('/img/svg/bg-room-tour-1.svg'), url('/img/svg/bg-room-tour-2.svg');
+    background-repeat:no-repeat;
+    background-position: 130% 0, 140% -20%;
+    background-size: 70%;
+}
+
+@media (min-width: 450px) {
+    .container__room-tour {
+        background-position: 140% -50px, 150% -30px;
+        background-size: 60%;
+    }
+}
+
+
+@media (min-width: 720px) {
+
+.container {
+    padding-top: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.container__header {
+    background-image: url('/img/svg/bg-header-1.svg'), url('/img/svg/bg-header-2.svg'),;
+    background-repeat:no-repeat;
+    background-position: -30% -50%, -10% -70%;
+    background-size: 45%;
+}
+
+.container__room-tour {
+    background-position: 130% -50px, 140% -10px;
+}
+
+.container__footer {
+    background-image: url('/img/svg/bg-footer-1.svg'), url('/img/svg/bg-footer-2.svg'),;
+    background-repeat:no-repeat;
+    background-position: 110% 35%, 140% 35%;
+    background-size: 55%;
+}
+
+.container__wrapper {
+    flex-direction: row;
+}
+}
+
+@media (min-width: 1200px) {
+    .container__room-tour {
+        background-position: 140% -120px, 160% -100px;
+    }
+}
+

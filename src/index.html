@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>House-hunter</title>
+</head>
+<body class="global">
+    <div class="container container__header">
+        <div class="container__wrapper">
+        <header class="header">
+            <div class="header__wrapper">
+            <nav class="header__nav nav">
+            <a class="nav__logo logo" href="#"><img src="@img/svg/Logo.svg" alt=""></a>   
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="#">About Us</a></li>
+                    <li class="nav__item"><a class="nav__link">Article</a></li>
+                     <li class="nav__item nav__item--drop-down"><a class="nav__link">Property
+                        <!-- <svg  width="10" height="5" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.6236 1.12001C10.624 0.946246 10.5631 0.777845 10.4515 0.644043C10.3887 0.568737 10.3116 0.506487 10.2245 0.460859C10.1374 0.415232 10.0421 0.387122 9.94413 0.378141C9.84612 0.369161 9.74728 0.379485 9.65329 0.408522C9.5593 0.43756 9.47199 0.48474 9.39637 0.547361L5.38526 3.87916L1.36668 0.666354C1.29013 0.604578 1.20205 0.558444 1.10751 0.530606C1.01296 0.502768 0.913813 0.493774 0.81576 0.50414C0.717706 0.514507 0.62268 0.54403 0.536144 0.591013C0.449609 0.637995 0.373269 0.701511 0.311514 0.77791C0.243388 0.854858 0.192001 0.94497 0.160579 1.04259C0.129157 1.14021 0.118378 1.24323 0.128919 1.34519C0.139459 1.44715 0.171091 1.54584 0.22183 1.63507C0.272569 1.7243 0.341319 1.80215 0.423766 1.86372L4.91381 5.45582C5.04771 5.5652 5.21567 5.625 5.38901 5.625C5.56234 5.625 5.7303 5.5652 5.8642 5.45582L10.3542 1.73729C10.4448 1.66268 10.5164 1.56791 10.5632 1.46066C10.61 1.35341 10.6307 1.23671 10.6236 1.12001Z" fill="black"/>
+                        </svg> -->
+                    </a>
+                          <ul class="drop-down hidden">
+                        <li class="drop-down__item "><a href="#" class="nav__link drop-down__link">House</a></li>
+                        <li class="drop-down__item "><a href="#" class="nav__link drop-down__link">Apartment</a></li>
+                        <li class="drop-down__item"><a href="#" class="nav__link drop-down__link">Vila</a></li>
+                    </ul>    
+                    </li>
+                </ul>
+                <div class="user-login button">
+                <button class="user-login__sign-up button__user button__user--sign-up">Sign up!</button>
+                <button class="user-login__login button__user button__user--login hidden">Login</button>
+                <button class="user-login__logout button__user button__user--logout hidden">Logout</button>
+                </div>
+                
+                
+            </nav>
+
+            </div>
+            <ul class="progress-list">
+                <li class="progress-list__item  progress-list__item--1">
+                    <div class="progress-list__item--elipse-container">
+                        <picture class="progress-list__img-container">
+                            <img class="progress-list__img" srcset="/img/elipse/Ellipse-4.jpg 1x, /img/elipse/Ellipse-4@2x.jpg 2x" width="15" height="15" alt="">
+                            <img class="progress-list__img progress-list__img--desktop"srcset="/img/elipse/Ellipse-5.jpg 1x, /img/elipse/Ellipse-5@2x.jpg 2x" width="15" height="15" alt="">
+                            <img class="progress-list__img progress-list__img--desktop" srcset="/img/elipse/Ellipse-6.jpg 1x, /img/elipse/Ellipse-6@2x.jpg 2x" width="15" height="15" alt="">
+                        </picture>
+                    </div>
+                    <div class="progress-list__item--text-container">
+                        <h3>1K+ People</h3>
+                        <p>Successfully Getting Home</p>
+                    </div>
+                </li>
+                <li class="progress-list__item progress-list__item--2">
+                    <div class="progress-list__item--rectangle-container">
+                        <picture class="progress-list__img-container">
+                            <img class="progress-list__img" src="/img/Rectangle/Rectangle 12.jpg" width="15" height="15" alt="">
+                        </picture>
+                    </div>
+                    <div class="progress-list__item--text-container">
+                        <h3>56 House</h3>
+                        <p>Sold Monthly</p>
+                    </div>
+                </li>
+                <li class="progress-list__item progress-list__item--3">
+                    <div class="progress-list__item--elipse-container">
+                        <picture class="progress-list__img-container">
+                            <img class="progress-list__img" srcset="/img/elipse/Ellipse-7.jpg 1x, /img/elipse/Ellipse-7@2x.jpg 2x" width="15" height="15" alt="">
+                        </picture>
+                    </div>
+                    <div class="progress-list__item--text-container">
+                        <h3>4K+</h3>
+                        <p>People Looking for New Homes</p>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <section class="search-panel">
+            <div class="logo search-panel__logo">
+                <img class="logo__img" src="@img/svg/Logo.svg"></img>
+                <h1 class="logo__text"></h1>
+            </div>
+            <h2 class="search-panel__slogan">Find The Place To<br>
+                Live 
+                <span class="search-panel__slogan search-panel__slogan--mode">Your Dreams</span><br>
+                Easily Here</h2>
+            <p class="search-panel__description">Everything you need about finding your place to live will be here, where it will be easier for you</p>
+            <!-- <form action="" id="search-form">
+                <div class="search-panel__input-group">
+                <input type="search" class="search-panel__search" placeholder="Search for the location you want!">
+                <input type="submit" class="main-button" value="Search">
+                </div>
+            </form> -->
+            <form action="" id="" class="cta-inputs">
+                <div class="cta-inputs__input-group">
+                <input type="search" class="cta-inputs__input cta-inputs__input--search" placeholder="Search for the location you want!">
+                <input type="submit" class="cta-inputs__button main-button" value="Search">
+                </div>
+            </form>
+            <section class="partnership">
+            <h2 class="partnetship__title">Our Partnership:</h2>
+            <ul class="partnership__list">
+            <li class="partnership__item"><picture><img srcset="/img/partners/traveloka_logo.png 1x,
+                                                                /img/partners/traveloka_logox2.png 2x"></picture></li>
+            <li class="partnership__item"><picture><img srcset="/img/partners/tiket_logo.png 1x, /img/partners/tiket_logox2.png 2x" alt=""></picture></li>
+            <li class="partnership__item"><picture><img srcset="/img/partners/airbnb_logo.png 1x, /img/partners/airbnb_logox2.png 2x" alt=""></picture></li>
+            <li class="partnership__item"><picture><img srcset="/img/partners/tripadvisor_logo.png 1x, /img/partners/tripadvisor_logox2.png 2x" alt=""></picture></li>
+            </ul>
+            </section>
+        </section>
+    </div>
+    </div>
+    <main>
+    <div class="container slider">
+        <section class="featured-house slider__container">
+            <span class="style-element">Our recommendation</span>
+            <nav class="featured-house__nav slider__nav">
+                <h2 class="featured-house__title">Featured House</h2>
+                <form action="">
+                    <ul class="featured-house__input-list">
+                        <li class="featured-house__input-item">
+                            <label for="house"><input type="radio" name="radio-group" id="house" class=" featured-house__radio visually-hidden" checked>
+                            <span class="featured-house__button button__radio">
+                                <svg class="featured-house__svg" width="14" height="14" viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 10.8319V19.5C20.9998 19.7719 20.9262 20.0386 20.7868 20.272C20.6475 20.5054 20.4476 20.6968 20.2084 20.8259C19.9916 20.9432 19.7485 21.0031 19.5021 20.9999H14.9967C14.7978 20.9999 14.607 20.9209 14.4664 20.7803C14.3257 20.6396 14.2467 20.4488 14.2467 20.2499V15.7493C14.2467 15.5504 14.1677 15.3596 14.0271 15.2189C13.8864 15.0783 13.6956 14.9993 13.4967 14.9993H10.4967C10.2978 14.9993 10.107 15.0783 9.9664 15.2189C9.82574 15.3596 9.74673 15.5504 9.74673 15.7493V20.2499C9.74673 20.4488 9.66771 20.6396 9.52706 20.7803C9.3864 20.9209 9.19564 20.9999 8.99673 20.9999H4.5002C4.28754 21.0005 4.07723 20.9556 3.88335 20.8682C3.68948 20.7808 3.51651 20.653 3.37604 20.4934C3.12946 20.2082 2.99571 19.8427 3.00001 19.4657V10.8318C3.00017 10.6228 3.04392 10.4162 3.12846 10.225C3.21299 10.0339 3.33646 9.86251 3.49098 9.7218L10.9903 2.90308C11.2658 2.65075 11.6258 2.51078 11.9994 2.51074C12.3729 2.51071 12.733 2.65062 13.0085 2.90289L20.5091 9.72189C20.6636 9.86263 20.787 10.034 20.8716 10.2252C20.9561 10.4163 20.9998 10.6229 21 10.8319Z" fill="#888B97"/>
+                                    </svg>
+                                House</span></label>   
+                        </li>
+                        <li class="featured-house__input-item">
+                            <label for="villa"><input type="radio" name="radio-group" id="villa" class=" featured-house__radio visually-hidden">
+                            <span class="featured-house__button featured-house__button--villa button__radio">
+                                <svg class="featured-house__svg" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 20.9999H4C3.45 20.9999 3 20.5499 3 19.9999V8.68994C3 8.26994 3.25 7.89994 3.64 7.74994L14.64 3.51994C14.7921 3.46126 14.9561 3.44064 15.118 3.45986C15.2798 3.47909 15.4345 3.53758 15.5686 3.63025C15.7027 3.72292 15.8121 3.84696 15.8873 3.99156C15.9624 4.13617 16.0012 4.29696 16 4.45994V9.99994H8C7.45 9.99994 7 10.4499 7 10.9999V20.9999ZM17 11.9999H10C9.45 11.9999 9 12.4499 9 12.9999V19.9999C9 20.5499 9.45 20.9999 10 20.9999H14V16.9999C14 16.4499 14.45 15.9999 15 15.9999C15.55 15.9999 16 16.4499 16 16.9999V20.9999H20C20.55 20.9999 21 20.5499 21 19.9999V11.9999C21 10.8999 20.1 9.99994 19 9.99994C17.9 9.99994 17 10.8999 17 11.9999Z" fill="#888B97"/>
+                                    </svg>
+                                    
+                                Villa</span></label>   
+                        </li>
+                        <li class="featured-house__input-item">
+                            <label for="apartment"><input type="radio" name="radio-group" id="apartment" class=" featured-house__radio visually-hidden">
+                            <span class="featured-house__button button__radio">
+                                <svg class="featured-house__svg" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 11V5C17 3.9 16.1 3 15 3H9C7.9 3 7 3.9 7 5V7H5C3.9 7 3 7.9 3 9V19C3 20.1 3.9 21 5 21H11V17H13V21H19C20.1 21 21 20.1 21 19V13C21 11.9 20.1 11 19 11H17ZM7 19H5V17H7V19ZM7 15H5V13H7V15ZM7 11H5V9H7V11ZM11 15H9V13H11V15ZM11 11H9V9H11V11ZM11 7H9V5H11V7ZM15 15H13V13H15V15ZM15 11H13V9H15V11ZM15 7H13V5H15V7ZM19 19H17V17H19V19ZM19 15H17V13H19V15Z" fill="#888B97"/>
+                                    </svg>
+                                Apartment</span></label>   
+                        </li>
+                    </ul>
+                    
+                </form>
+                <ul class="slider__button-container">
+                    <li class="slider__toggle"><button class="main-button"><svg  class="slider__toggle-svg slider__toggle-svg--left"width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.65891 0.835518C1.3886 0.834986 1.12665 0.929714 0.918511 1.10326C0.801367 1.20098 0.704535 1.321 0.633558 1.45644C0.562582 1.59188 0.518856 1.74007 0.504886 1.89254C0.490916 2.04501 0.506975 2.19875 0.552145 2.34496C0.597315 2.49118 0.670706 2.62699 0.768117 2.74462L5.95092 8.98411L0.953218 15.2353C0.857121 15.3543 0.785358 15.4913 0.742054 15.6384C0.69875 15.7855 0.684759 15.9397 0.700885 16.0922C0.717011 16.2448 0.762935 16.3926 0.83602 16.5272C0.909104 16.6618 1.00791 16.7806 1.12675 16.8766C1.24645 16.9826 1.38662 17.0625 1.53847 17.1114C1.69033 17.1603 1.85058 17.177 2.00918 17.1607C2.16778 17.1443 2.3213 17.0951 2.46011 17.0161C2.59891 16.9372 2.72 16.8303 2.81579 16.702L8.40349 9.71749C8.57365 9.5092 8.66667 9.24793 8.66667 8.97829C8.66667 8.70866 8.57365 8.44739 8.40349 8.2391L2.61912 1.25459C2.50306 1.11371 2.35564 1.00235 2.18881 0.929541C2.02197 0.85673 1.84043 0.824516 1.65891 0.835518Z" fill="white"/>
+                        </svg></button></li>
+                    <li class="slider__toggle"><button class="main-button"><svg class="slider__toggle-svg slider__toggle-svg--right" width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.65891 0.835518C1.3886 0.834986 1.12665 0.929714 0.918511 1.10326C0.801367 1.20098 0.704535 1.321 0.633558 1.45644C0.562582 1.59188 0.518856 1.74007 0.504886 1.89254C0.490916 2.04501 0.506975 2.19875 0.552145 2.34496C0.597315 2.49118 0.670706 2.62699 0.768117 2.74462L5.95092 8.98411L0.953218 15.2353C0.857121 15.3543 0.785358 15.4913 0.742054 15.6384C0.69875 15.7855 0.684759 15.9397 0.700885 16.0922C0.717011 16.2448 0.762935 16.3926 0.83602 16.5272C0.909104 16.6618 1.00791 16.7806 1.12675 16.8766C1.24645 16.9826 1.38662 17.0625 1.53847 17.1114C1.69033 17.1603 1.85058 17.177 2.00918 17.1607C2.16778 17.1443 2.3213 17.0951 2.46011 17.0161C2.59891 16.9372 2.72 16.8303 2.81579 16.702L8.40349 9.71749C8.57365 9.5092 8.66667 9.24793 8.66667 8.97829C8.66667 8.70866 8.57365 8.44739 8.40349 8.2391L2.61912 1.25459C2.50306 1.11371 2.35564 1.00235 2.18881 0.929541C2.02197 0.85673 1.84043 0.824516 1.65891 0.835518Z" fill="white"/>
+                        </svg></button></li>
+                </ul>
+            </nav>
+            <div class="slider__slide-container">
+                <article class="slider__card ">
+                    <picture class="slider__card-mod slider__card-mod--popular"><img class="slider__img" srcset="/img/Cosmo's-house.jpg 1x, /img/Cosmo's-housex2.jpg 2x" width="200px" alt=""></picture>
+                    
+                    <h3 class="slider__title">Roselands house</h3>
+                    <p class="slider__price">$ 35.000.000</p>
+                <div class="saller">
+                    <picture>
+                    <img srcset="/img/elipse/Ellipse-6.jpg 1x, /img/elipse/Ellipse-6@2x.jpg 2x" width="40" alt=""></picture>
+                    <div class="slide__wrapper">
+                    <a href="#" class="saller__name">Dianne Russell</a>
+                    <a href="#" class="saller__text">Manchester, Kentucky</a>
+                    </div>
+                </div>
+                </article>
+                <article class="slider__card">
+                    <picture class="slider__card-mod slider__card-mod--new"><img class="slider__img" srcset="/img/Roselands-House.jpg 1x, /img/Roselands-Housex2.jpg 2x" width="200px" alt=""></picture>
+                    
+                    <h3 class="slider__title">Roselands house</h3>
+                    <p class="slider__price">$ 35.000.000</p>
+                <div class="saller">
+                    <picture><img srcset="/img/elipse/Ellipse-7.jpg 1x, /img/elipse/Ellipse-7@2x.jpg 2x"  width="40" alt=""></picture>
+                    <div class="slide__wrapper">
+                    <a href="#" class="saller__name">Dianne Russell</a>
+                    <a href="#" class="saller__text">Manchester, Kentucky</a>
+                    </div>
+                </div>
+                </article>
+                <article class="slider__card">
+                    <picture class="slider__card-mod slider__card-mod--best"><img class="slider__img" srcset="/img/The-old-lighthouse.jpg 1x, /img/The-old-lighthousex2.jpg 2x" width="200px" alt=""></picture>
+                    
+                    <h3 class="slider__title">Roselands house</h3>
+                    <p class="slider__price">$ 35.000.000</p>
+                <div class="saller">
+                    <picture><img srcset="/img/elipse/Ellipse-5.jpg 1x, /img/elipse/Ellipse-5@2x.jpg 2x"  width="40" alt=""></picture>
+                    <div class="slide__wrapper">
+                    <a href="#" class="saller__name">Dianne Russell</a>
+                    <a href="#" class="saller__text">Manchester, Kentucky</a>
+                    </div>
+                </div>
+                </article>
+                <article class="slider__card">
+                    <picture class="slider__card-mod slider__card-mod--best"><img class="slider__img" srcset="/img/Woodlandside.jpg 1x, /img/Woodlandsidex2.jpg 2x" width="200px" alt=""></picture>
+                    
+                    <h3 class="slider__title">Roselands house</h3>
+                    <p class="slider__price">$ 35.000.000</p>
+                <div class="saller">
+                    <picture><img srcset="/img/elipse/Ellipse-4.jpg 1x, /img/elipse/Ellipse-4@2x.jpg 2x"  width="40" alt=""></picture>
+                    <div class="slide__wrapper">
+                    <a href="#" class="saller__name">Dianne Russell</a>
+                    <a href="#" class="saller__text">Manchester, Kentucky</a>
+                    </div>
+                </div>
+                </article>
+            </div>
+            
+        </section>
+    </div>
+    <div class="container container__room-tour">
+        <div class="room-tour-container">
+            <span class="style-element">Ready to sell!</span>
+            <section class="room-tour-description">
+                <h2 class="room-tour-description__title">Let’s tour and see our house!</h2>
+                <p class="room-tour-description__title-description">Houses recommended by our partners that have been curated to become the home of your dreams!</p>
+                
+                <ul class="room-tour-description__detail-list">
+                    <li class="room-tour-description__detail-item room-tour-description__detail-item--bedrooms">2 Bedrooms</li>
+                    <li class="room-tour-description__detail-item room-tour-description__detail-item--bathrooms">2 Bathrooms</li>
+                    <li class="room-tour-description__detail-item room-tour-description__detail-item--carport">1 Carport</li>
+                    <li class="room-tour-description__detail-item room-tour-description__detail-item--floors">2 Floors</li>
+                </ul>
+                <div class="saller saller--room-tour">
+                    <picture><img srcset="/img/elipse/Ellipse-6.jpg 1x, /img/elipse/Ellipse-6@2x.jpg 2x"  width="40" alt=""></picture>
+                    <div class="slide__wrapper">
+                    <a href="#" class="saller__name">Dianne Russell</a>
+                    <a href="#" class="saller__text">Manager Director</a>
+                    </div>
+                    <a class="main-button main-button__contact" href="tel:">
+                        <svg class="main-button--phone" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.38439 2.47912C8.90949 2.3208 9.47298 2.34711 9.98104 2.55365C10.4891 2.7602 10.9111 3.13453 11.1768 3.61432L11.2668 3.79312L12.06 5.55832C12.3011 6.09411 12.3793 6.68894 12.285 7.26885C12.1907 7.84876 11.928 8.38814 11.5296 8.81992L11.3712 8.97832L10.1184 10.1459C9.8928 10.3595 10.062 11.1863 10.8792 12.5999C11.6124 13.8719 12.2112 14.4659 12.504 14.4983H12.5556L12.6192 14.4863L15.0792 13.7339C15.4098 13.6325 15.7626 13.6285 16.0955 13.7224C16.4283 13.8162 16.727 14.004 16.956 14.2631L17.0664 14.4011L18.6936 16.6571C19.0129 17.0992 19.1721 17.6368 19.1451 18.1814C19.118 18.7261 18.9063 19.2453 18.5448 19.6535L18.3984 19.8047L17.7468 20.4215C17.1627 20.9746 16.4322 21.3484 15.6419 21.4984C14.8516 21.6483 14.0349 21.5682 13.2888 21.2675C10.9668 20.3315 8.85719 18.1931 6.94079 14.8739C5.02079 11.5463 4.2228 8.64592 4.5792 6.16192C4.68715 5.41091 4.99653 4.70316 5.47446 4.11388C5.9524 3.52459 6.58104 3.07578 7.2936 2.81512L7.52519 2.73832L8.38439 2.47912Z" fill="white"/>
+                            </svg>
+                        <span>Contact Now</span>
+                        </a>
+                </div>
+            </section>
+            <div class="room-tour__content show-photo">
+                <img srcset="/img/presentation-photo-1.jpg 1x, /img/presentation-photo-1x2.jpg 2x" width="60" height="60" alt="" class="show-photo__item show-photo__item--main">
+                <div class="show-photo__wrapper"> 
+                    <img srcset="/img/presentation-photo-2.jpg 1x, /img/presentation-photo-2x2.jpg 2x" width="60" height="60" alt="" class="show-photo__item show-photo__item--next">               
+                    <img srcset="/img/presentation-photo-3.jpg 1x, /img/presentation-photo-3x2.jpg 2x" width="60" height="60" alt="" class="show-photo__item">
+                    <img srcset="/img/presentation-photo-4.jpg 1x, /img/presentation-photo-4x2.jpg 2x" width="60" height="60" alt="" class="show-photo__item"></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <section class="review">
+            <div class="review__wrapper">
+            <span class="style-element">See Our Review</span>
+            <h2 class="review__title">What Our User Say About Us</h2>
+            <ul class="review__list slider">
+                <li class="review__element slider__item--1">
+                    <div class="slider-item__container">
+                        <img srcset="/img/review-photo-1.jpg 1x, /img/review-photo-1x2.jpg 2x" width="250" alt="" class="review__img">
+                    </div>
+                    <section class=" review-item">
+                            <h2 class="review-item__title">I bought the great house!</h2>
+                            <p class="review-item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora necessitatibus, alias minus veritatis provident voluptatum, optio ut est minima nam nemo temporibus consequatur, corrupti explicabo ex repudiandae commodi architecto?</p>
+                            <div class="saller saller--review">
+                                <picture><img srcset="/img/elipse/Ellipse-6.jpg 1x, /img/elipse/Ellipse-6@2x.jpg 2x"  width="40" alt=""></picture>
+                                <div class="slide__wrapper">
+                                <a href="#" class="saller__name">Dianne Russell</a>
+                                <a href="#" class="saller__text">Manager Director</a>
+                                </div>
+                                <div class="saller__grade">4.6</div>
+                            </div>
+                    </section>
+                  
+                </li>
+                <li class="review__element slider__item--2 ">
+                    <div class="slider-item__container">
+                        <img srcset="/img/review-photo-2.jpg 1x, /img/review-photo-2x2.jpg 2x"  alt="" class="review__img">
+                    </div>
+                    <section class="review-item">
+                            <h2 class="review-item__title">My house sold out fast!</h2>
+                            <p class="review-item__description">I was finally able to sell my house quickly through Hounter by immediately setting me up with people who wanted my house. I also do not get a discount from the sale of my house. Awesome!</p>
+                            <div class="saller saller--review">
+                                <picture><img srcset="/img/elipse/Ellipse-6.jpg 1x, /img/elipse/Ellipse-6@2x.jpg 2x"  width="40" alt=""></picture>
+                                <div class="slide__wrapper">
+                                <a href="#" class="saller__name">Dianne Russell</a>
+                                <a href="#" class="saller__text">Manager Director</a>
+                                </div>
+                                <div class="saller__grade">4.3</div>
+                            </div>
+                    </section>
+                  
+                </li>
+                <li class="review__element slider__item--3">
+                    <div class="slider-item__container">
+                        <img srcset="/img/review-photo-3.jpg 1x, /img/review-photo-3x2.jpg 2x" width="250" alt="" class="review__img">
+                    </div>
+                    <section class="review-item">
+                            <h2 class="review-item__title">The cost of my house growed up.</h2>
+                            <p class="review-item__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aliquid perferendis ipsam blanditiis quas obcaecati similique culpa vero laudantium cupiditate cumque, nesciunt iste rerum est eligendi dolor veritatis voluptatibus dicta?</p>
+                            <div class="saller saller--review">
+                                <picture><img srcset="/img/elipse/Ellipse-6.jpg 1x, /img/elipse/Ellipse-6@2x.jpg 2x"  width="40" alt=""></picture>
+                                <div class="slide__wrapper">
+                                <a href="#" class="saller__name">Dianne Russell</a>
+                                <a href="#" class="saller__text">Manager Director</a>
+                                </div>
+                                <div class="saller__grade">4.3</div>
+                            </div>
+                    </section>
+                  
+                </li>
+            </ul>
+            </div>
+                <ul class="review__dots dots">
+                    <li class=""><button class="dots__dot"></button></li>
+                    <li class=""><button class="dots__dot dots__dot--active"></button></li>
+                    <li class=""><button class="dots__dot"></button></li>
+                </ul>            
+        </section>
+    </div>
+    <div class="container">
+        <section class="articles">
+            <span class="style-element">See tips and trick from our partnership</span>
+            <div class="articles__title articles-header">
+                <h2 class="articles-header__title">Find out more about<br>
+                    selling and buying homes</h2>
+                <p class="articles-header__description"></p>
+                <button class="articles-header__button main-button">More Article!</button>
+            </div>
+            <div class="article__wrapper">
+            <ul class="articles-list">
+                <li class="articles-list__item">
+                        <img class="articles-list__item-image" srcset="/img/article-img1.jpg 1x, /img/article-img1x2.jpg 2x" width="100" height="75" alt="">
+                    <div class="articles-list__description article-preview">
+                        <div class="saller saller--article-preview">
+                            <picture><img srcset="/img/elipse/Ellipse-6.jpg 1x, /img/elipse/Ellipse-6@2x.jpg 2x"  width="40" alt=""></picture>
+                            <div class="slide__wrapper">
+                            <a href="#" class="saller__name">Dianne Russell</a>
+                            </div>
+                        </div>
+                        <h3 class="articles-preview__title">The things we need to check when we want to buy a house</h3>
+                        <p class="articles-preview__description" style="display:none"></p>
+                        <p class="articles-preview__date"><span>4 min read</span><time datetime="">25 Apr 2021</time></p>
+                    </div>
+                </li>
+                <li class="articles-list__item">
+                        <img class="articles-list__item-image" srcset="/img/article-img2.jpg 1x, /img/article-img2x2.jpg 2x" width="100" height="75" alt="">
+                    <div class="articles-list__description article-preview">
+                        <div class="saller saller--article-preview">
+                            <picture><img srcset="/img/elipse/Ellipse-6.jpg 1x, /img/elipse/Ellipse-6@2x.jpg 2x"  width="40" alt=""></picture>
+                            <div class="slide__wrapper">
+                            <a href="#" class="saller__name">Dianne Russell</a>
+                            </div>
+                        </div>
+                        <h3 class="articles-preview__title">The things we need to check when we want to buy a house</h3>
+                        <p class="articles-preview__description" style="display:none"></p>
+                        <p class="articles-preview__date"><span>4 min read</span><time datetime="">25 Apr 2021</time></p>
+                    </div>
+                </li>
+                <li class="articles-list__item">
+                        <img class="articles-list__item-image" srcset="/img/article-img3.jpg 1x, /img/article-img3x2.jpg 2x" width="100" height="75" alt="">
+                    <div class="articles-list__description article-preview">
+                        <div class="saller saller--article-preview">
+                            <picture><img srcset="/img/elipse/Ellipse-6.jpg 1x, /img/elipse/Ellipse-6@2x.jpg 2x"  width="40" alt=""></picture>
+                            <div class="slide__wrapper">
+                            <a href="#" class="saller__name">Dianne Russell</a>
+                            </div>
+                        </div>
+                        <h3 class="articles-preview__title">The things we need to check when we want to buy a house</h3>
+                        <p class="articles-preview__description" style="display:none"></p>
+                        <p class="articles-preview__date"><span>4 min read</span><time datetime="">25 Apr 2021</time></p>
+                    </div>
+                </li>
+
+            </ul>
+            <ul class="articles-list--main">
+                <li >
+                    <div class="">
+                        <img srcset="/img/article-img4.jpg 1x, /img/article-img4x2.jpg 2x" alt="" class="articles-list__item-image--main">
+                    </div>
+                    <div class="articles-list__description article-preview">
+                        <div class="saller saller--article-preview">
+                            <picture><img srcset="/img/elipse/Ellipse-7.jpg 1x, /img/elipse/Ellipse-7@2x.jpg 2x"  width="40" alt=""></picture>
+                            <div class="slide__wrapper">
+                            <a href="#" class="saller__name">Cameron Williamson</a>
+                            </div>
+                        </div>
+                        <h3 class="articles-preview__title">12 Things to know before buying a house</h3>
+                        <p class="articles-preview__description">Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house</p>
+                        <p class="articles-preview__date"><span>8 min read</span><time datetime="">25 Apr 2021</time></p>
+                    </div>
+                </li>
+            </ul>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <section class="cta">
+            <img srcset="/img/Rectangle-12.png 1x, /img/Rectangle-12@2x.png 2x" alt="" class="cta__img-random cta__img-random--1">
+            <img srcset="/img/Rectangle-25.png 1x, /img/Rectangle-25@2x.png 2x" alt="" class="cta__img-random cta__img-random--2">
+            <img srcset="/img/Rectangle-26.png 1x, /img/Rectangle-26@2x.png 2x" alt="" class="cta__img-random cta__img-random--3">
+            <img srcset="/img/Rectangle-27.png 1x, /img/Rectangle-27@2x.png 2x" alt="" class="cta__img-random cta__img-random--4">
+            <img srcset="/img/elipse/Ellipse-7.jpg 1x, /img/elipse/Ellipse-7@2x.jpg 2x" alt="" class="cta__img-random cta__img-random--5">
+            <img srcset="/img/elipse/Ellipse-6.jpg 1x, /img/elipse/Ellipse-6@2x.jpg 2x" alt="" class="cta__img-random cta__img-random--6">
+            <img srcset="/img/elipse/Ellipse-5.jpg 1x, /img/elipse/Ellipse-5@2x.jpg 2x" alt="" class="cta__img-random cta__img-random--7">
+            <img srcset="/img/elipse/Ellipse-7.jpg 1x, /img/elipse/Ellipse-7@2x.jpg 2x" alt="" class="cta__img-random cta__img-random--8">
+            <h2 class="cta__title">Subscribe For More Info<br>
+                and update from Hounter</h2>
+            <form action="" id="" class="cta-inputs">
+                <div class="cta-inputs__input-group">
+                <input type="search" class="cta-inputs__input cta-inputs__input--email" placeholder="Your emale here">
+                <input type="submit" class="cta-inputs__button main-button" value="Subscribe Now">
+                </div>
+            </form>
+        </section>
+    </div>
+ </main>   
+ <div class="container container__footer">
+    <footer class="footer">
+        <div class="footer__wrapper--logo">
+                   <div class="footer__logo">
+            <div class="logo logo--footer">
+                <img class="logo__img" src="@img/svg/Logo.svg"></img>
+            </div>
+            </div>
+            <p class="footer__slogan">We provide information about properties such as houses, villas and apartments to help people find their dream home</p>
+            <ul class="footer__social social">
+                <li class="social__item"><a href="#" class="social__link"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.3186 26V16.6154H9V13.2365H12.3186V10.3505C12.3186 8.08264 14.2789 6 18.7959 6C20.6247 6 21.9771 6.1311 21.9771 6.1311L21.8705 9.28642C21.8705 9.28642 20.4913 9.27638 18.9863 9.27638C17.3574 9.27638 17.0965 9.83768 17.0965 10.7693V13.2365H22L21.7866 16.6154H17.0965V26H12.3186Z" fill="#3C4563"/>
+                    </svg></a></li>
+                <li class="social__item"><a href="#" class="social__link"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M28 8.37575C27.1174 8.76628 26.157 9.04735 25.1676 9.15682C26.1948 8.53089 26.9639 7.54202 27.3308 6.37575C26.367 6.96388 25.3111 7.37629 24.2101 7.59469C23.7499 7.09003 23.1933 6.688 22.575 6.41364C21.9567 6.13929 21.2899 5.99849 20.6163 6.00001C17.8906 6.00001 15.6986 8.26628 15.6986 11.0473C15.6986 11.4379 15.7447 11.8284 15.8197 12.2042C11.7385 11.9852 8.09855 9.98522 5.67864 6.92309C5.23771 7.69562 5.00665 8.57524 5.00949 9.47042C5.00949 11.2219 5.87766 12.7663 7.20154 13.6746C6.42136 13.643 5.65944 13.4231 4.97777 13.0326V13.0947C4.97777 15.5473 6.66795 17.5799 8.92056 18.0473C8.49761 18.16 8.06251 18.2177 7.62553 18.2189C7.30537 18.2189 7.00252 18.1864 6.69679 18.142C7.31979 20.142 9.134 21.5947 11.2943 21.642C9.60413 23 7.48708 23.7988 5.18832 23.7988C4.77587 23.7988 4.39514 23.784 4 23.7367C6.18051 25.1716 8.7677 26 11.5539 26C20.599 26 25.5484 18.3136 25.5484 11.642C25.5484 11.4231 25.5484 11.2042 25.534 10.9852C26.4915 10.2663 27.3308 9.37575 28 8.37575Z" fill="#3C4563"/>
+                    </svg>
+                    </a></li>
+                <li class="social__item"><a href="#" class="social__link"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.9973 12.6652C14.1611 12.6652 12.6626 14.1638 12.6626 16C12.6626 17.8362 14.1611 19.3348 15.9973 19.3348C17.8335 19.3348 19.332 17.8362 19.332 16C19.332 14.1638 17.8335 12.6652 15.9973 12.6652ZM25.9989 16C25.9989 14.6191 26.0114 13.2506 25.9338 11.8722C25.8563 10.2711 25.4911 8.85017 24.3203 7.67938C23.147 6.50609 21.7286 6.14334 20.1275 6.06579C18.7466 5.98824 17.3782 6.00074 15.9998 6.00074C14.6189 6.00074 13.2505 5.98824 11.8721 6.06579C10.271 6.14334 8.85012 6.50859 7.67935 7.67938C6.50608 8.85267 6.14334 10.2711 6.06579 11.8722C5.98824 13.2531 6.00074 14.6216 6.00074 16C6.00074 17.3784 5.98824 18.7494 6.06579 20.1278C6.14334 21.7289 6.50858 23.1498 7.67935 24.3206C8.85262 25.4939 10.271 25.8567 11.8721 25.9342C13.253 26.0118 14.6214 25.9993 15.9998 25.9993C17.3807 25.9993 18.7491 26.0118 20.1275 25.9342C21.7286 25.8567 23.1495 25.4914 24.3203 24.3206C25.4936 23.1473 25.8563 21.7289 25.9338 20.1278C26.0139 18.7494 25.9989 17.3809 25.9989 16ZM15.9973 21.131C13.1579 21.131 10.8664 18.8394 10.8664 16C10.8664 13.1606 13.1579 10.869 15.9973 10.869C18.8367 10.869 21.1282 13.1606 21.1282 16C21.1282 18.8394 18.8367 21.131 15.9973 21.131ZM21.3383 11.8572C20.6754 11.8572 20.14 11.3218 20.14 10.6589C20.14 9.99594 20.6754 9.46058 21.3383 9.46058C22.0013 9.46058 22.5366 9.99594 22.5366 10.6589C22.5368 10.8163 22.5059 10.9722 22.4458 11.1177C22.3856 11.2632 22.2974 11.3954 22.1861 11.5067C22.0748 11.618 21.9426 11.7062 21.7971 11.7664C21.6516 11.8265 21.4957 11.8574 21.3383 11.8572Z" fill="#3C4563"/>
+                    </svg></a></li>
+            </ul> 
+        </div>
+
+        <div class="footer__wrapper">
+        <div class="footer__property ">
+            <h3 class="footer__title">Property</h3>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="property__link">House</a></li>
+                <li class="footer__item"><a href="#" class="property__link">Apartment</a></li>
+                <li class="footer__item"><a href="#" class="property__link">Villa</a></li>
+            </ul>
+        </div>
+        <div class="footer__article-list article-list">
+            <h3 class="footer__title">Article</h3>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="article-list__link">New Article</a></li>
+                <li class="footer__item"><a href="#" class="article-list__link">Popular Article</a></li>
+                <li class="footer__item"><a href="#" class="article-list__link">Most Read</a></li>
+                <li class="footer__item"><a href="#" class="article-list__link">Tips & Tricks</a></li>
+            </ul>
+        </div>
+        <div class="footer__contact contact">
+            <h3 class="footer__title">Contact</h3>
+            <ul class="footer__list">
+                <li class="footer__item"><p class="contact__address">2464 Royal Ln. Mesa, New Jersey 45463</p></li>
+                <li class="footer__item"><a href="tel:+880005553535" class="">(671) 555-0110</a></li>
+                <li class="footer__item"><a href="mailto:house-hunter@example.com" class="">info@hounter.com</a></li>
+            </ul>
+            
+            
+            
+        </div>
+      </div>  
+    </footer>
+    </div>
+ </div>
+    
+</body>
+<script src="/js/app.min.js"></script>
+</html>

@@ -1,0 +1,125 @@
+.articles {
+    position: relative;
+}
+
+.articles-list--main {
+    display: none;
+}
+
+.articles-header {
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+
+.articles-list__item {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    margin-bottom: 20px;
+}
+
+.articles-header__title {
+    margin-top: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #1b1c57;
+}
+
+.articles-header__button {
+    margin: 0 auto;
+}
+
+.articles-list__item-image {
+    display: block;
+    border-radius: 16px;
+}
+
+.articles-preview__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: #1B1C57;
+
+    margin: 0;
+}
+
+.articles-list__description{
+    // width: 50%;
+}
+.articles-preview__date {
+    display: block;
+    margin: 0;
+    margin-top: 2px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 10px;
+    color: #888B97;
+
+    span {
+        padding-right: 2px;
+        margin-right: 2px;
+        border-right: 1px solid #888B97;
+    }
+}
+
+@media (min-width: 720px) {
+    .articles-header__title {
+        width: 40%;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .articles-list--main {
+        display: block;
+        width: 50%;
+    }
+
+    .articles-list__item-image--main {
+        width: 100%;
+        border-radius: 16px;
+        
+    }
+
+    .articles-list {
+        width: 50%;
+        padding-right: 5%;
+    }
+
+    .articles-preview__description {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #626687;
+        opacity: 0.75;
+    }
+
+    .article__wrapper {
+        display: flex;
+    }
+    .articles-list__item {
+        justify-content: flex-start;
+        img {
+            margin-right: 5%;
+            
+        }
+    }
+
+    .articles-preview__title{
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 15px;
+    }
+
+    .articles-list__item-image {
+        width: 50%;
+        height: auto;
+    }
+
+    .articles-preview__date  {
+        font-size: 12px;
+    }
+}

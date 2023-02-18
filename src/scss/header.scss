@@ -1,0 +1,42 @@
+
+.header {
+    min-height: 300px;
+
+    
+    background-image: url('../img/image_6.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0px 50px;
+
+    @media (-webkit-min-device-pixel-ratio: 2) {
+        background-image: url('../img/image_6x2.jpg');
+    }
+}
+
+
+.header__nav {
+    padding-top: 10px;
+}
+
+@media (min-width:720px){
+  .header {
+    
+    order: 1;
+    width: 50%;
+    // background-image: url('../img/image_6.jpg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background-position: 0px 0px;
+    border-radius: 0 0 0 40px;
+   
+}
+
+.header__wrapper {
+    // display: flex;
+    // justify-content: space-between;
+}  
+}
+
+@media (min-width:1200px) {
+    
+}

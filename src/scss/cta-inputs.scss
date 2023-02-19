@@ -81,4 +81,18 @@
         background-position: 9px 6px;
         background-size: 25px 25px;
     }
+
+    .cta-inputs__input--email {
+        width: 35%;
+        height: 60px;
+        background-position: 15px 10px;
+        background-size: 34px 34px;
+        padding-left: 60px;
+
+        &::placeholder {
+            font-size: 18px;
+            line-height: 32px;
+        }
+        
+    }
 }

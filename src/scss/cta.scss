@@ -94,3 +94,14 @@
         right: 6%;
     }
 }
+
+@media (min-width: 1200px) {
+    .cta__title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .cta__img-random--5, .cta__img-random--6, .cta__img-random--7, .cta__img-random--8 {
+        border-radius: 50%;
+    }
+}

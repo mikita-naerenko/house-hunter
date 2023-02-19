@@ -46,9 +46,6 @@
     margin: 0;
 }
 
-.articles-list__description{
-    // width: 50%;
-}
 .articles-preview__date {
     display: block;
     margin: 0;
@@ -121,5 +118,35 @@
 
     .articles-preview__date  {
         font-size: 12px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .articles-header__title {
+        width: 40%;
+        margin-bottom: 30px;
+
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .article__wrapper {
+        padding: 3% 5%;
+    }
+
+    .articles-preview__title{
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: 15px;
+    }
+
+    .articles-preview__date  {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .articles-preview__description {
+        font-size: 14px;
+        line-height: 24px;
     }
 }

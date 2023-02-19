@@ -13,3 +13,12 @@
         justify-content: flex-start;
     }
 }
+
+@media (min-width: 1200px) {
+    .social__item {
+        svg {
+            width: 42px;
+            height: 42px;
+        }
+    }
+}

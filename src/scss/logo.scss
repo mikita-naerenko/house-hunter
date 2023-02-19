@@ -18,3 +18,15 @@
     margin: 0;  
   }
 }
+
+@media (min-width: 1200px) {
+  .logo__img {
+    width: 150px;
+    height: auto;
+     
+ }
+
+  .logo--footer {
+    margin-bottom: 20px;
+  }
+}

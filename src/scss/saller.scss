@@ -114,4 +114,22 @@
         font-size: 14px;
         line-height: 22px;
     }
+
+
+    .saller__grade {
+        font-size: 20px;
+        line-height: 28px;
+
+        margin-left: 20px;
+    
+        &::before {
+            content: url('/img/svg/star-icon.svg');
+            display: block;
+            transform: scale(0.7);
+            position: absolute;
+            top: -1px;
+            left: -25px;
+    
+        }
+    }
 }

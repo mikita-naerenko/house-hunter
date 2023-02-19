@@ -1,13 +1,4 @@
-.footer {
-    // background-image: url('/img/svg/bg-footer-1.svg'), url('/img/svg/bg-footer-2.svg'),;
-    // background-image: radial-gradient(#B9FF82 0%, transparent 80%, #f1f1f1 120%);
-    // background-position: 100px 75px;
-    // background-repeat:no-repeat;
-    // background-position: left top, 120% 30%;
-    // background-size: 35%;
-    
-    
-}
+
 
 .footer__slogan {
     font-weight: 400;
@@ -76,5 +67,24 @@
     @media (min-width: 1200px) {
         .footer__wrapper {
             justify-content: space-around;
+        }
+
+        .footer__title{
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 20px;
+        }
+
+        .footer__item {
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer__slogan {
+            font-size: 14px;
+            line-height: 24px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
     }

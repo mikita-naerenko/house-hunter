@@ -8,3 +8,15 @@
     
 } 
 }
+
+@media (min-width: 1200px){
+    .drop-down {
+     position: absolute;
+     top: 40px;
+     
+ } 
+
+ .drop-down__item {
+    margin-bottom: 5px;
+ }
+ }

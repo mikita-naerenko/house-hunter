@@ -23,8 +23,10 @@
 @import "footer.scss";
 @import "social.scss";
 @import "show-photo.scss";
+@import "big-photo.scss";
 
 body {
+    position: relative;
     // background-color: #f1f1f1;
     // overflow-x: hidden;
     // position: relative;

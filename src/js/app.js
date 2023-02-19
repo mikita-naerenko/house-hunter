@@ -1,1 +1,2 @@
-console.log('hi');
+"use strict"
+import './nav.js';

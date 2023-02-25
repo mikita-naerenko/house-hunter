@@ -246,5 +246,33 @@
 
       }
     ]
+  },
+  {
+    "review": [
+      {
+        "id": "1",
+        "img": "/img/review-photo-1.jpg 1x, /img/review-photo-1x2.jpg 2x",
+        "authorId": "11",
+        "grade": "4.8",
+        "title": "I bought the great house!",
+        "text": "Amazing experience! The team was attentive, knowledgeable, and helped us find our dream home. They made the entire process easy and stress-free. Highly recommend!"
+      },
+      {
+        "id": "2",
+        "img": "/img/review-photo-2.jpg 1x, /img/review-photo-2x2.jpg 2x",
+        "authorId": "10",
+        "grade": "4.3",
+        "title": "My house sold out fast!",
+        "text": "Smooth and stress-free experience with excellent communication. The team went above and beyond to ensure a successful sale. Highly recommended for their professionalism and expertise."
+      },
+      {
+        "id": "3",
+        "img": "/img/review-photo-3.jpg 1x, /img/review-photo-3x2.jpg 2x",
+        "authorId": "9",
+        "grade": "4.7",
+        "title": "I bought an amazing house!",
+        "text": "Outstanding service from start to finish. The team listened to our needs and found us our dream home. Highly recommended for their expertise and support throughout the process."
+      }
+    ]
   }
  ]

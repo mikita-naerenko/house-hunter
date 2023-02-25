@@ -7,11 +7,12 @@ const sallerRoomTour = document.querySelector('.saller--room-tour');
 const getUserData = async function() {
     try {
      const result = await fetch ('https://63f1ec8af28929a9df501176.mockapi.io/user');   
-     if (!result.ok) throw new Error(e.message);
+     if (!result.ok) throw new Error(`Failed to fetch user data: ${e.message}`);
      const userData = await result.json();
      return  userData;
     } catch (e) {
-        console.error(e.message);
+        throw new Error(`Problem with getting data from server: ${e.message}`);
+        
     }
 }
 
@@ -113,6 +114,30 @@ const renderRoomTourSection = function(roomTourArr) {
 
 };
 
+const renderReviewItem = function(reviewArr) {
+    reviewArr.slice(0, 3).forEach ((review, i) => {
+        const html = `<li class="review__element slider__item--${i+1}">
+                        <div class="slider-item__container">
+                            <img srcset="${review.img}" width="250" alt="house photo" class="review__img">
+                        </div>
+                        <section class=" review-item">
+                                <h2 class="review-item__title">${review.title}</h2>
+                                <p class="review-item__description">${review.text}</p>
+                                <div class="saller saller--review">
+                                    <picture><img srcset="${review.author.avatar}"  width="40" alt="user avatar"></picture>
+                                    <div class="slide__wrapper">
+                                    <a href="#" class="saller__name">${review.author.name}</a>
+                                    <a href="#" class="saller__text">${review.author.position}</a>
+                                    </div>
+                                    <div class="saller__grade">${review.grade}</div>
+                                </div>
+                        </section>
+                    </li>`;
+                    document.querySelector('.review__list').insertAdjacentHTML('afterbegin', html);
+    })
+
+};
+
 const typeOfProductButtonHandler = function(productCardArr, e) {
     const target = e.target.getAttribute('id');
     const slideContainer = document.querySelector('.slider__slide-container');
@@ -142,33 +167,37 @@ const showPhotoOnClickHandler = function(e){
 };
 
  getUserData().then(data =>{
+// Destructuring data from json
+    const [{userData:  userArr},
+            {productCard: productCardArr},
+            {articles: articlesArr},
+            {roomTour: roomTourArr},
+            {review: reviewArr}] = data;
 
-    const productCardArr = data[1].productCard;
-    const userArr = data[0].userData;
-    
-    const sallerArr = data[0].userData.filter(el => el.admin === true);
-    productCardArr.forEach(item => {
-        sallerArr.map(saller => {
-            if (saller.id === item.sallerId) item.saller = saller;
-        });
-    });
-    const articlesArr = data[2].articles;
-    articlesArr.forEach(article => {
-        article.date = new Date(article.date);
-        userArr.map(user => {
-            if (user.id === article.authorId) article.author = user;
-        });
-    });
-    const roomTourArr = data[3].roomTour;
-    roomTourArr.forEach(item => {
-        sallerArr.map(saller => {
-            if (saller.id === item.sallerId) item.saller = saller;
-        });
-    });
-    
+
+    const uniteArrays = function(arr1, arr2) {
+            // Function add object saller or user using sallerID and authorID
+        return arr1.forEach(el1 => {
+                if (el1.date) el1.date = new Date(el1.date);
+            arr2.map(el2 => {
+                
+                if (el2.id === el1.authorId) el1.author = el2;
+                if (el2.id === el1.sallerId) el1.saller = el2;
+            })
+        })
+    }  
+    const sallerArr = userArr.filter(el => el.admin === true);
+    // Unite array and object
+    uniteArrays(productCardArr, sallerArr);
+    uniteArrays(articlesArr, userArr);
+    uniteArrays(roomTourArr, sallerArr);
+    uniteArrays(reviewArr, userArr);
+    // Call function to render elements 
+    renderReviewItem(reviewArr);
     renderArticles(articlesArr);
     renderProductCard(productCardArr);
     renderRoomTourSection(roomTourArr);
+    // Add event listener
     document.querySelector('.featured-house__input-list').addEventListener('click', typeOfProductButtonHandler.bind(null, productCardArr));
     document.querySelector('.show-photo').addEventListener('click', showPhotoOnClickHandler)
 });

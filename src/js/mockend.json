@@ -1,0 +1,230 @@
+[
+  {
+   "userData": [
+    {
+     "name": "Dianne Russell",
+     "address": "Manchester, Kentucky",
+     "avatar": "/img/avatar/Ellipse-1.jpg 1x, /img/avatar/Ellipse-1@2x.jpg 2x",
+     "id": "1",
+     "admin": true,
+     "post": {
+      "article": [],
+      "review": []
+     },
+     "position": "Manager Director"
+    },
+    {
+     "name": "Robert Fox",
+     "address": "Dr. San Jose, South Dakota",
+     "avatar": "/img/avatar/Ellipse-2.jpg 1x, /img/avatar/Ellipse-2@2x.jpg 2x",
+     "id": "2",
+     "position": "sales department",
+     "admin": true,
+     "post": {
+      "article": [],
+      "review": []
+     }
+    },
+    {
+     "name": "Ronald Richards",
+     "address": "Santa Ana, Illinois",
+     "avatar": "/img/avatar/Ellipse-3.jpg 1x, /img/avatar/Ellipse-3@2x.jpg 2x",
+     "id": "3",
+     "admin": true,
+     "post": {
+      "article": [],
+      "review": []
+     },
+     "position": "sales department"
+    },
+    {
+     "name": "Jenny Wilson",
+     "address": "Preston Rd. Inglewood, Maine 98380",
+     "avatar": "/img/avatar/Ellipse-4.jpg 1x, /img/avatar/Ellipse-4@2x.jpg 2x",
+     "id": "4",
+     "admin": true,
+     "post": {
+      "article": [],
+      "review": []
+     },
+     "position": "sales department"
+    },
+    {
+     "name": "Courtney Henry",
+     "address": "Philadelphia",
+     "avatar": "/img/avatar/Ellipse-5.jpg 1x, /img/avatar/Ellipse-5@2x.jpg 2x",
+     "id": "5",
+     "admin": true,
+     "post": {
+      "article": [],
+      "review": []
+     },
+     "position": "CEO Andarafish"
+    },
+    {
+     "name": "Courtney Henry",
+     "address": "Manchester, Kentucky",
+     "avatar": "/img/avatar/Ellipse-6.jpg 1x, /img/avatar/Ellipse-6@2x.jpg 2x",
+     "id": "6",
+     "admin": true,
+     "post": {
+      "article": [],
+      "review": []
+     },
+     "position": "Manager Director"
+    },
+    {
+     "name": "Darlene Robertson",
+     "address": "Manchester, Kentucky",
+     "avatar": "/img/avatar/Ellipse-7.jpg 1x, /img/avatar/Ellipse-7@2x.jpg 2x",
+     "id": "7",
+     "admin": true,
+     "post": {
+      "article": [],
+      "review": []
+     },
+     "position": "Manager Director"
+    },
+    {
+     "name": "Cameron Williamson",
+     "address": "Manchester, Kentucky",
+     "avatar": "/img/avatar/Ellipse-8.jpg 1x, /img/avatar/Ellipse-8@2x.jpg 2x",
+     "id": "8",
+     "position": "Manager Director"
+    },
+    {
+     "name": "Danny Ford",
+     "address": "Manchester, Kentucky",
+     "avatar": "/img/avatar/Ellipse-9.jpg 1x, /img/avatar/Ellipse-9@2x.jpg 2x",
+     "id": "9",
+     "position": "Manager Director"
+    },
+    {
+     "name": "Richard Alpert",
+     "address": "Manchester, Kentucky",
+     "avatar": "/img/avatar/Ellipse-10.jpg 1x, /img/avatar/Ellipse-10@2x.jpg 2x",
+     "id": "10",
+     "position": "Manager Director"
+    },
+    {
+     "name": "Augustine Gusling",
+     "address": "Manchester, Kentucky",
+     "avatar": "/img/avatar/Ellipse-11.jpg 1x, /img/avatar/Ellipse-11@2x.jpg 2x",
+     "id": "11",
+     "position": "Manager Director"
+    }
+   ]
+  },
+  {
+   "productCard": [
+    {
+     "id": 1,
+     "img": "img/Roselands-House.jpg 1x, /img/Roselands-Housex2.jpg 2x",
+     "coords": {
+      "lat": 1,
+      "lng": 1
+     },
+     "name": "Roselands House",
+     "price": "$ 35.000.000",
+     "sallerId": "1",
+     "address": "",
+     "category": {
+      "type": "house",
+      "modif": "popular"
+     }
+    },
+    {
+     "id": 2,
+     "img": "/img/Woodlandside.jpg 1x, /img/Woodlandsidex2.jpg 2x",
+     "coords": {
+      "lat": 1,
+      "lng": 1
+     },
+     "name": "Woodlandside",
+     "price": "$ 20.000.000",
+     "sallerId": "2",
+     "address": "",
+     "category": {
+      "type": "house",
+      "modif": "new"
+     }
+    },
+    {
+     "id": 3,
+     "img": "/img/The-old-lighthouse.jpg 1x, /img/The-old-lighthousex2.jpg 2x",
+     "coords": {
+      "lat": 1,
+      "lng": 1
+     },
+     "name": "The Old Lighthouse",
+     "price": "$ 44.000.000",
+     "sallerId": "3",
+     "address": "",
+     "category": {
+      "type": "apartment",
+      "modif": "best"
+     }
+    },
+    {
+     "id": 4,
+     "img": "/img/Cosmo's-house.jpg 1x, /img/Cosmo's-housex2.jpg 2x",
+     "coords": {
+      "lat": 1,
+      "lng": 1
+     },
+     "name": "Cosmo's House",
+     "price": "$ 22.000.000",
+     "sallerId": "4",
+     "address": "",
+     "category": {
+      "type": "villa",
+      "modif": "popular"
+     }
+    }
+   ]
+  },
+  {
+   "articles": [
+    {
+     "id": "1",
+     "img": "/img/article-img1.jpg 1x, /img/article-img1x2.jpg 2x",
+     "authorId": "7",
+     "title": "The things we need to check when we want to buy a house",
+     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aliquid perferendis ipsam blanditiis quas obcaecati similique culpa vero laudantium cupiditate cumque, nesciunt iste rerum est eligendi dolor veritatis voluptatibus dicta?",
+     "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aliquid perferendis ipsam blanditiis quas obcaecati similique culpa vero laudantium cupiditate cumque, nesciunt iste rerum est eligendi dolor veritatis voluptatibus dicta?",
+     "readTime": "4 min",
+     "date": "2021-04-05T15:00:00.000Z"
+    },
+    {
+     "id": "2",
+     "img": "/img/article-img2.jpg 1x, /img/article-img2x2.jpg 2x",
+     "authorId": "8",
+     "title": "7 Ways to distinguish the quality of the house we want to buy",
+     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aliquid perferendis ipsam blanditiis quas obcaecati similique culpa vero laudantium cupiditate cumque, nesciunt iste rerum est eligendi dolor veritatis voluptatibus dicta?",
+     "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aliquid perferendis ipsam blanditiis quas obcaecati similique culpa vero laudantium cupiditate cumque, nesciunt iste rerum est eligendi dolor veritatis voluptatibus dicta?",
+     "readTime": "6 min",
+     "date": "2021-04-01T15:00:00.000Z"
+    },
+    {
+     "id": "3",
+     "img": "/img/article-img3.jpg 1x, /img/article-img3x2.jpg 2x",
+     "authorId": "9",
+     "title": "The best way to know the quality of the house we want to buy",
+     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aliquid perferendis ipsam blanditiis quas obcaecati similique culpa vero laudantium cupiditate cumque, nesciunt iste rerum est eligendi dolor veritatis voluptatibus dicta?",
+     "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aliquid perferendis ipsam blanditiis quas obcaecati similique culpa vero laudantium cupiditate cumque, nesciunt iste rerum est eligendi dolor veritatis voluptatibus dicta?",
+     "readTime": "2 min",
+     "date": "2021-04-29T15:00:00.000Z"
+    },
+    {
+     "id": "4",
+     "img": "/img/article-img4.jpg 1x, /img/article-img4x2.jpg 2x",
+     "authorId": "10",
+     "title": "12 Things To Know Before Buying A House",
+     "description": "Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house",
+     "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aliquid perferendis ipsam blanditiis quas obcaecati similique culpa vero laudantium cupiditate cumque, nesciunt iste rerum est eligendi dolor veritatis voluptatibus dicta?",
+     "readTime": "8 min",
+     "date": "2021-04-30T15:00:00.000Z"
+    }
+   ]
+  }
+ ]

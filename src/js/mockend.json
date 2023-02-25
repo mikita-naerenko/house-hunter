@@ -226,5 +226,25 @@
      "date": "2021-04-30T15:00:00.000Z"
     }
    ]
+  },
+  {
+    "roomTour": [
+      {
+        "photoList": [
+          "/img/presentation-photo-1.jpg 1x, /img/presentation-photo-1x2.jpg 2x",
+          "/img/presentation-photo-2.jpg 1x, /img/presentation-photo-2x2.jpg 2x",
+          "/img/presentation-photo-3.jpg 1x, /img/presentation-photo-3x2.jpg 2x",
+          "/img/presentation-photo-4.jpg 1x, /img/presentation-photo-4x2.jpg 2x"
+        ],
+        "houseOptions": {
+          "bedrooms": 2,
+          "bathrooms": 2,
+          "carport": 1,
+          "floors": 2
+        },
+        "sallerId": "7"
+
+      }
+    ]
   }
  ]

@@ -97,6 +97,16 @@ const showPhotoOnClickHandler = function(e){
           activateCurrentDots(slide);
         }
       });
+    //   const buttonNext = document.querySelector('.main-button--next');
+    //   const buttonPrev = document.querySelector('.main-button--previous');
+    //   const cards = document.querySelectorAll('.slider__card');
+    //   const cardWidth = cards[0].offsetWidth;
+    //   const sliderContainer = document.querySelector('.slider__slide-container');
+
+    document.querySelector('.main-button--next').addEventListener('click', handleSliderScroll);
+    document.querySelector('.main-button--previous').addEventListener('click', handleSliderScroll);
+    // console.log(cards[0])
+    //   cards[0].style.transform = `translateX(-100%)`;
 
 });
 
@@ -105,6 +115,7 @@ let slides, slidesNumber;
 // const slidesNumber = slides.length;
 const slider = document.querySelector('.review__list');
 const dotContainer = document.querySelector('.dots');
+
 
 const activateCurrentDots = function (slide){
     // Activate a dot button
@@ -117,6 +128,7 @@ const moveToSlide = function(slide) {
       s.style.transform = `translateX(${(i - slide) * 100}%)`;
     });
   };
+
 const sliderSetInterval = function() {
     // Change slide on timer
     const interval = 8000;
@@ -135,6 +147,64 @@ const sliderSetInterval = function() {
         clearInterval(intervalId);
       });
 }
+
+    // const handleSliderScroll = function() {
+    //     const buttonNext = document.querySelector('.main-button--next');
+    //     const buttonPrev = document.querySelector('.main-button--previous');
+    //     const cards = document.querySelectorAll('.slider__card');
+    //     const cardWidth = cards[0].offsetWidth;
+    //     const sliderContainer = document.querySelector('.slider__slide-container');
+
+    //     this.classList.contains('main-button--next') ? buttonPrev.disabled = false : buttonNext.disabled = false;
+    //     this.classList.contains('main-button--next') ? sliderContainer.scrollLeft = cardWidth : sliderContainer.scrollLeft -=cardWidth;
+    //     if (this.classList.contains('main-button--next')) {
+
+    //         sliderContainer.scrollLeft >= sliderContainer.scrollWidth - sliderContainer.clientWidth 
+    //         ? buttonNext.disabled = true 
+    //         : buttonNext.disabled = false;
+    //     } else {
+    //         sliderContainer.scrollLeft >= sliderContainer.scrollWidth - sliderContainer.clientWidth 
+    //         ? buttonPrev.disabled = true 
+    //         : buttonPrev.disabled = false;
+    //     }
+
+    // }
+    const handleSliderScroll = function() {
+        const buttonNext = document.querySelector('.main-button--next');
+        const buttonPrev = document.querySelector('.main-button--previous');
+        const cards = document.querySelectorAll('.slider__card');
+        const cardWidth = cards[0].offsetWidth;
+        const sliderContainer = document.querySelector('.slider__slide-container');
+        if (this.classList.contains('main-button--next')) {
+            buttonPrev.disabled = false
+            sliderContainer.scrollLeft = cardWidth
+            sliderContainer.scrollLeft >= sliderContainer.scrollWidth - sliderContainer.clientWidth 
+            ? buttonNext.disabled = true 
+            : buttonNext.disabled = false;
+        } else {
+            buttonNext.disabled = false;
+            sliderContainer.scrollLeft -=cardWidth;
+            sliderContainer.scrollLeft >= sliderContainer.scrollWidth - sliderContainer.clientWidth 
+            ? buttonPrev.disabled = true 
+            : buttonPrev.disabled = false;
+        }
+
+    }
+
+    // const scrollPrevButton = () => {
+    //     const buttonNext = document.querySelector('.main-button--next');
+    //     const buttonPrev = document.querySelector('.main-button--previous');
+    //     const cards = document.querySelectorAll('.slider__card');
+    //     const cardWidth = cards[0].offsetWidth;
+    //     const sliderContainer = document.querySelector('.slider__slide-container');
+    //     // buttonNext.disabled = false;
+    //     sliderContainer.scrollLeft -=cardWidth;
+    //     sliderContainer.scrollLeft >= sliderContainer.scrollWidth - sliderContainer.clientWidth 
+    //     ? buttonPrev.disabled = true 
+    //     : buttonPrev.disabled = false;
+    // }
+
+
 
 
 // Start review slider

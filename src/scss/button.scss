@@ -1,5 +1,7 @@
 
 
+
+
 .button__user {
     display: flex;
     flex-direction: row;
@@ -35,6 +37,13 @@
     &:hover {
         background: #049a68;
     }
+}
+
+.main-button--next[disabled], .main-button--previous[disabled] {
+    
+        opacity: 0.5;
+        background-color: rgb(185, 183, 183);
+    
 }
 
 .main-button--phone {

@@ -639,6 +639,12 @@ template {
   background: #049a68;
 }
 
+.main-button--next[disabled],
+.main-button--previous[disabled] {
+  opacity: 0.5;
+  background-color: rgb(185, 183, 183);
+}
+
 .main-button--phone {
   display: flex;
   height: 15px;
@@ -859,6 +865,7 @@ template {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  scroll-behavior: smooth;
 }
 
 .slider__title {

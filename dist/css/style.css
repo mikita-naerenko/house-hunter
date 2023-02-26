@@ -881,18 +881,6 @@ template {
   display: flex;
 }
 
-.slider .slider__item--1 {
-  transform: translateX(-100%);
-}
-
-.slider .slider__item--2 {
-  transform: translateX(0%);
-}
-
-.slider .slider__item--3 {
-  transform: translateX(100%);
-}
-
 .slider__button-container {
   display: flex;
 }
@@ -2194,6 +2182,7 @@ a {
   .review__list {
     min-height: 680px;
     overflow-x: auto;
+    transition: transform 0.3s ease-in-out;
   }
 
   .review__list::-webkit-scrollbar {

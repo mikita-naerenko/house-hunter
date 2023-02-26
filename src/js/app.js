@@ -80,11 +80,65 @@ const showPhotoOnClickHandler = function(e){
     renderArticles(articlesArr);
     renderProductCard(productCardArr);
     renderRoomTourSection(roomTourArr);
+    // Slider review
+    
+    slides = document.querySelectorAll('.review__element');
+    slidesNumber = slides.length;
+    activateCurrentDots(0);
     // Add event listener
     document.querySelector('.featured-house__input-list').addEventListener('click', typeOfProductButtonHandler.bind(null, productCardArr));
-    document.querySelector('.show-photo').addEventListener('click', showPhotoOnClickHandler)
+    document.querySelector('.show-photo').addEventListener('click', showPhotoOnClickHandler);
+
+    
+    dotContainer.addEventListener('click', function(e){
+        if (e.target.classList.contains('dots__dot')){
+          const slide = e.target.dataset.slide;
+          moveToSlide(slide)
+          activateCurrentDots(slide);
+        }
+      });
+
 });
 
+let currentSlide = 1;
+let slides, slidesNumber;
+// const slidesNumber = slides.length;
+const slider = document.querySelector('.review__list');
+const dotContainer = document.querySelector('.dots');
+
+const activateCurrentDots = function (slide){
+    // Activate a dot button
+    document.querySelectorAll('.dots__dot').forEach(el => el.classList.remove('dots__dot--active'));
+    document.querySelector(`.dots__dot[data-slide="${slide}"]`).classList.add('dots__dot--active');
+}
+const moveToSlide = function(slide) {
+    // moving to current slide
+    slides.forEach((s, i)=> {
+      s.style.transform = `translateX(${(i - slide) * 100}%)`;
+    });
+  };
+const sliderSetInterval = function() {
+    // Change slide on timer
+    const interval = 8000;
+    const intervalId = setInterval(()=> {
+        moveToSlide(currentSlide);
+        activateCurrentDots(currentSlide);
+        currentSlide++;
+        if (currentSlide > slidesNumber - 1) currentSlide = 0; 
+      }, interval);
+      slider.addEventListener('click', function(){
+        // Stop the moving slide on  click
+        clearInterval(intervalId);
+      });
+      dotContainer.addEventListener('click', function(){
+        // Stop the moving slide on  click
+        clearInterval(intervalId);
+      });
+}
+
+
+// Start review slider
+window.addEventListener("load", sliderSetInterval);
 
 
 

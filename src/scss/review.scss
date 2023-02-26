@@ -99,6 +99,7 @@
     .review__list {
         min-height: 680px;
         overflow-x: auto;
+        transition: transform 0.3s ease-in-out;
         &::-webkit-scrollbar {
             display: none;
             }

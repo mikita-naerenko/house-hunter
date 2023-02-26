@@ -114,7 +114,7 @@ export const renderReviewItem = function(reviewArr) {
                                 </div>
                         </section>
                     </li>`;
-                    document.querySelector('.review__list').insertAdjacentHTML('afterbegin', html);
+                    document.querySelector('.review__list').insertAdjacentHTML('beforeend', html);
     })
 
 };

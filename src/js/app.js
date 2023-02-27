@@ -5,8 +5,10 @@ import {renderReviewItem,
         renderRoomTourSection} from './render.js';
 import './nav.js';
 
+import {handleSliderScroll} from './scrollSlider.js';
 
-const sallerRoomTour = document.querySelector('.saller--room-tour');
+
+
 
  
 const getUserData = async function() {
@@ -49,6 +51,18 @@ const showPhotoOnClickHandler = function(e){
     
 };
 
+const uniteArrays = function(arr1, arr2) {
+    // Function add object saller or user using sallerID and authorID
+return arr1.forEach(el1 => {
+        if (el1.date) el1.date = new Date(el1.date);
+    arr2.map(el2 => {
+        
+        if (el2.id === el1.authorId) el1.author = el2;
+        if (el2.id === el1.sallerId) el1.saller = el2;
+    })
+})
+}  
+
  getUserData().then(data =>{
 // Destructuring data from json
     const [{userData:  userArr},
@@ -57,18 +71,6 @@ const showPhotoOnClickHandler = function(e){
             {roomTour: roomTourArr},
             {review: reviewArr}] = data;
 
-
-    const uniteArrays = function(arr1, arr2) {
-            // Function add object saller or user using sallerID and authorID
-        return arr1.forEach(el1 => {
-                if (el1.date) el1.date = new Date(el1.date);
-            arr2.map(el2 => {
-                
-                if (el2.id === el1.authorId) el1.author = el2;
-                if (el2.id === el1.sallerId) el1.saller = el2;
-            })
-        })
-    }  
     const sallerArr = userArr.filter(el => el.admin === true);
     // Unite array and object
     uniteArrays(productCardArr, sallerArr);
@@ -97,20 +99,14 @@ const showPhotoOnClickHandler = function(e){
           activateCurrentDots(slide);
         }
       });
-    //   const buttonNext = document.querySelector('.main-button--next');
-    //   const buttonPrev = document.querySelector('.main-button--previous');
-    //   const cards = document.querySelectorAll('.slider__card');
-    //   const cardWidth = cards[0].offsetWidth;
-    //   const sliderContainer = document.querySelector('.slider__slide-container');
 
     document.querySelector('.main-button--next').addEventListener('click', handleSliderScroll);
     document.querySelector('.main-button--previous').addEventListener('click', handleSliderScroll);
-    // console.log(cards[0])
-    //   cards[0].style.transform = `translateX(-100%)`;
+
 
 });
 
-let currentSlide = 1;
+// let currentSlide = 1;
 let slides, slidesNumber;
 // const slidesNumber = slides.length;
 const slider = document.querySelector('.review__list');
@@ -131,6 +127,7 @@ const moveToSlide = function(slide) {
 
 const sliderSetInterval = function() {
     // Change slide on timer
+    let currentSlide = 1;
     const interval = 8000;
     const intervalId = setInterval(()=> {
         moveToSlide(currentSlide);
@@ -148,67 +145,42 @@ const sliderSetInterval = function() {
       });
 }
 
-    // const handleSliderScroll = function() {
-    //     const buttonNext = document.querySelector('.main-button--next');
-    //     const buttonPrev = document.querySelector('.main-button--previous');
-    //     const cards = document.querySelectorAll('.slider__card');
-    //     const cardWidth = cards[0].offsetWidth;
-    //     const sliderContainer = document.querySelector('.slider__slide-container');
-
-    //     this.classList.contains('main-button--next') ? buttonPrev.disabled = false : buttonNext.disabled = false;
-    //     this.classList.contains('main-button--next') ? sliderContainer.scrollLeft = cardWidth : sliderContainer.scrollLeft -=cardWidth;
-    //     if (this.classList.contains('main-button--next')) {
-
-    //         sliderContainer.scrollLeft >= sliderContainer.scrollWidth - sliderContainer.clientWidth 
-    //         ? buttonNext.disabled = true 
-    //         : buttonNext.disabled = false;
-    //     } else {
-    //         sliderContainer.scrollLeft >= sliderContainer.scrollWidth - sliderContainer.clientWidth 
-    //         ? buttonPrev.disabled = true 
-    //         : buttonPrev.disabled = false;
-    //     }
-
-    // }
-    const handleSliderScroll = function() {
-        const buttonNext = document.querySelector('.main-button--next');
-        const buttonPrev = document.querySelector('.main-button--previous');
-        const cards = document.querySelectorAll('.slider__card');
-        const cardWidth = cards[0].offsetWidth;
-        const sliderContainer = document.querySelector('.slider__slide-container');
-        if (this.classList.contains('main-button--next')) {
-            buttonPrev.disabled = false
-            sliderContainer.scrollLeft = cardWidth
-            sliderContainer.scrollLeft >= sliderContainer.scrollWidth - sliderContainer.clientWidth 
-            ? buttonNext.disabled = true 
-            : buttonNext.disabled = false;
-        } else {
-            buttonNext.disabled = false;
-            sliderContainer.scrollLeft -=cardWidth;
-            sliderContainer.scrollLeft >= sliderContainer.scrollWidth - sliderContainer.clientWidth 
-            ? buttonPrev.disabled = true 
-            : buttonPrev.disabled = false;
-        }
-
-    }
-
-    // const scrollPrevButton = () => {
-    //     const buttonNext = document.querySelector('.main-button--next');
-    //     const buttonPrev = document.querySelector('.main-button--previous');
-    //     const cards = document.querySelectorAll('.slider__card');
-    //     const cardWidth = cards[0].offsetWidth;
-    //     const sliderContainer = document.querySelector('.slider__slide-container');
-    //     // buttonNext.disabled = false;
-    //     sliderContainer.scrollLeft -=cardWidth;
-    //     sliderContainer.scrollLeft >= sliderContainer.scrollWidth - sliderContainer.clientWidth 
-    //     ? buttonPrev.disabled = true 
-    //     : buttonPrev.disabled = false;
-    // }
-
-
-
-
 // Start review slider
 window.addEventListener("load", sliderSetInterval);
+
+// const ctaFormEmail = document.querySelector('#email');
+// const ctaInputEmail = document.querySelector('#email-input');
+// ctaFormEmail.addEventListener('submit', function(e){
+//     e.preventDefault();
+//     const email = ctaInputEmail.value.trim();
+//     !email || !isValidEmail(email) ? ctaInputEmail.setCustomValidity('Please enter a valid email address.') : ctaInputEmail.setCustomValidity('');
+// });
+
+// const isValidEmail = (email) => {
+//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     return emailRegex.test(email);
+// };
+const ctaFormEmail = document.querySelector('#email');
+const ctaInputEmail = document.querySelector('#email-input');
+
+ctaFormEmail.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const email = ctaInputEmail.value.trim();
+  ctaInputEmail.setCustomValidity(isValidEmail(email) ? '' : 'Please enter a valid email address.');
+  if (isValidEmail(email)) submitEmail(email);
+});
+
+ctaInputEmail.addEventListener('input', function(e) {
+  const email = ctaInputEmail.value.trim();
+  ctaInputEmail.setCustomValidity(isValidEmail(email) ? '' : 'Please enter a valid email address.');
+});
+
+const isValidEmail = (email) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+
+const submitEmail = (email) => console.log(`Email ${email} submitted`);
 
 
 

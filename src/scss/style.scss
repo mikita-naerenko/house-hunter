@@ -72,6 +72,21 @@ ul,a {
     display: none;
 }
 
+.lazy-img {
+    filter: blur(20px);
+  }
+
+img {
+    transition: filter 0.5s;
+}
+
+.section--hidden {
+    visibility: hidden;
+    
+    transform: translateY(9rem);
+    
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;

@@ -1404,6 +1404,19 @@ a {
   display: none;
 }
 
+.lazy-img {
+  filter: blur(20px);
+}
+
+img {
+  transition: filter 0.5s;
+}
+
+.section--hidden {
+  visibility: hidden;
+  transform: translateY(9rem);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1440,6 +1453,7 @@ a {
     padding-top: 1%;
     padding-left: 3%;
     padding-right: 3%;
+    transition: cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s;
   }
 
   .container__header {
@@ -1447,6 +1461,7 @@ a {
     background-repeat: no-repeat;
     background-position: -30% -50%, -10% -70%;
     background-size: 45%;
+    padding-bottom: 10vh;
   }
 
   .container__room-tour {

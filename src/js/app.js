@@ -103,6 +103,28 @@ return arr1.forEach(el1 => {
     document.querySelector('.main-button--next').addEventListener('click', handleSliderScroll);
     document.querySelector('.main-button--previous').addEventListener('click', handleSliderScroll);
 
+    const lazyImg = document.querySelectorAll('img[data-srcset]');
+    lazyImg.forEach(el => el.classList.add('lazy-img'));
+
+
+const loadImages = function(entries, observer){
+// const entry = entries[0];
+
+// entry.target.srcset = entry.target.dataset.srcset;
+// // entry.target.addEventListener('load', ()=>entry.target.style.filter = '');
+// entry.target.addEventListener('load', ()=>entry.target.classList.remove("lazy-img"));
+
+// observer.unobserve(entry.target);
+entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.srcset = entry.target.dataset.srcset;
+      entry.target.addEventListener('load', ()=>entry.target.classList.remove("lazy-img"));
+      observer.unobserve(entry.target);
+    }
+  });
+};
+const lazyImageObserver = new IntersectionObserver(loadImages, { root: null, threshold: 0.3});
+lazyImg.forEach(img => lazyImageObserver.observe(img));
 
 });
 
@@ -143,23 +165,14 @@ const sliderSetInterval = function() {
         // Stop the moving slide on  click
         clearInterval(intervalId);
       });
+
 }
 
 // Start review slider
 window.addEventListener("load", sliderSetInterval);
 
-// const ctaFormEmail = document.querySelector('#email');
-// const ctaInputEmail = document.querySelector('#email-input');
-// ctaFormEmail.addEventListener('submit', function(e){
-//     e.preventDefault();
-//     const email = ctaInputEmail.value.trim();
-//     !email || !isValidEmail(email) ? ctaInputEmail.setCustomValidity('Please enter a valid email address.') : ctaInputEmail.setCustomValidity('');
-// });
 
-// const isValidEmail = (email) => {
-//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//     return emailRegex.test(email);
-// };
+// Validation CTA email input form
 const ctaFormEmail = document.querySelector('#email');
 const ctaInputEmail = document.querySelector('#email-input');
 
@@ -183,7 +196,34 @@ const isValidEmail = (email) => {
 const submitEmail = (email) => console.log(`Email ${email} submitted`);
 
 
+// Appearance parts of site
+const sections = document.querySelectorAll('#observer-true');
 
+const appearanseSection = function(entries, observer) {
+    const entry = entries[0];
+   if(entry.isIntersecting) {
+    entry.target.classList.remove('section--hidden');
+    observer.unobserve(entry.target);
+   }
+};
+const sectionsObserver = new IntersectionObserver(appearanseSection, {root: null, threshold: 0.3,});
+sections.forEach(section => {
+  sectionsObserver.observe(section);
+  section.classList.add('section--hidden');
+  
+}); 
+
+// Lazy load image
+// const lazyImg = document.querySelectorAll('img[data-srcset]');
+
+// const loadImages = function(entries, observer){
+// const entry = entries[0];
+// entry.target.src = entry.target.dataset.srcset;
+// entry.target.addEventListener('load', ()=>entry.target.classList.remove('lazy-img'));
+// observer.unobserve(entry.target);
+// };
+// const lazyImageObserver = new IntersectionObserver(loadImages, {root: null, threshold: 0.2});
+// lazyImg.forEach(img => lazyImageObserver.observe(img));
 
 
 

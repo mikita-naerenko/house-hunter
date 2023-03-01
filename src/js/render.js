@@ -3,13 +3,13 @@ export const renderProductCard = function(productCardArr) {
     // The function to render product card
     productCardArr.forEach(productItem => {
            const html = `<article class="slider__card ">
-           <picture class="slider__card-mod slider__card-mod--${productItem.category.modif}"><img class="slider__img" srcset="${productItem.img}" width="200px" alt=""></picture>
+           <picture class="slider__card-mod slider__card-mod--${productItem.category.modif}"><img class="slider__img lazy-img" srcset="${productItem.img}" width="200px" alt=""></picture>
            
            <h3 class="slider__title">${productItem.name}</h3>
            <p class="slider__price">${productItem.price}</p>
        <div class="saller">
            <picture>
-           <img srcset="${productItem.saller.avatar}" width="40" alt=""></picture>
+           <img srcset="${productItem.saller.avatar}"  width="40" alt=""></picture>
            <div class="slide__wrapper">
            <a href="#" class="saller__name">${productItem.saller.name}</a>
            <a href="#" class="saller__text">${productItem.saller.address}</a>
@@ -26,10 +26,10 @@ export const renderArticles = function(articlesArr) {
     const [mainArticle] = articlesArr.slice(-1);
     firstThreeArticles.forEach(article => {
         const html = `<li class="articles-list__item">
-                        <img class="articles-list__item-image" srcset="${article.img}" width="100" height="75" alt="">
+                        <img class="articles-list__item-image" srcset="" data-srcset="${article.img}" width="100" height="75" alt="">
                         <div class="articles-list__description article-preview">
                         <div class="saller saller--article-preview">
-                            <picture><img srcset="${article.author.avatar}"  width="40" alt=""></picture>
+                            <picture><img srcset="" data-srcset="${article.author.avatar}" class="lazy-img" width="40" alt=""></picture>
                             <div class="slide__wrapper">
                             <a href="#" class="saller__name">${article.author.name}</a>
                             </div>
@@ -43,11 +43,11 @@ export const renderArticles = function(articlesArr) {
     });
 const htmlMainArticle = `<li >
                         <div class="">
-                            <img srcset="${mainArticle.img}" alt="" class="articles-list__item-image--main">
+                            <img srcset="" data-srcset="${mainArticle.img}"  alt="" class="articles-list__item-image--main ">
                         </div>
                         <div class="articles-list__description article-preview">
                             <div class="saller saller--article-preview">
-                                <picture><img srcset="${mainArticle.author.avatar}"  width="40" alt=""></picture>
+                                <picture><img srcset="" data-srcset="${mainArticle.author.avatar}"  width="40" alt=""></picture>
                                 <div class="slide__wrapper">
                                 <a href="#" class="saller__name">${mainArticle.author.name}</a>
                                 </div>
@@ -70,7 +70,7 @@ export const renderRoomTourSection = function(roomTourArr) {
     });
 
     const htmlSaller = `<div class="saller saller--room-tour">
-                    <picture><img srcset="${roomTourArr[currentTour].saller.avatar}"  width="40" alt=""></picture>
+                    <picture><img srcset="" data-srcset="${roomTourArr[currentTour].saller.avatar}" width="40" alt=""></picture>
                     <div class="slide__wrapper">
                     <a href="#" class="saller__name">${roomTourArr[currentTour].saller.name}</a>
                     <a href="#" class="saller__text">${roomTourArr[currentTour].saller.position}</a>
@@ -84,12 +84,12 @@ export const renderRoomTourSection = function(roomTourArr) {
                     </div>`;
     document.querySelector('.room-tour-description').insertAdjacentHTML('beforeend', htmlSaller);
     
-    const htmlMainPhoto = `<img srcset="${roomTourArr[currentTour].photoList.slice(0, 1)}" width="60" height="60" alt="" class="show-photo__item show-photo__item--main">`;
+    const htmlMainPhoto = `<img srcset="" data-srcset="${roomTourArr[currentTour].photoList.slice(0, 1)}"  width="60" height="60" alt="" class="show-photo__item show-photo__item--main">`;
     document.querySelector('.show-photo').insertAdjacentHTML('afterbegin', htmlMainPhoto);
     roomTourArr[currentTour].photoList.slice(1, 4).forEach((img, i) => {
         let html;
-        i === 0 ? html = `<img srcset="${img}" width="60" height="60" alt="" class="show-photo__item show-photo__item--next">`
-        : html = `<img srcset="${img}" width="60" height="60" alt="" class="show-photo__item"></img>`;
+        i === 0 ? html = `<img srcset="" data-srcset="${img}" width="60" height="60" alt="" class="show-photo__item show-photo__item--next">`
+        : html = `<img srcset="" data-srcset="${img}"  width="60" height="60" alt="" class="show-photo__item"></img>`;
         document.querySelector('.show-photo__wrapper').insertAdjacentHTML('beforeend', html);
     });
 
@@ -99,13 +99,13 @@ export const renderReviewItem = function(reviewArr) {
     reviewArr.slice(0, 3).forEach ((review, i) => {
         const html = `<li class="review__element slider__item--${i+1}">
                         <div class="slider-item__container">
-                            <img srcset="${review.img}" width="250" alt="house photo" class="review__img">
+                            <img srcset="${review.img}" data-srcset="${review.img}"  width="250" alt="house photo" class="review__img">
                         </div>
                         <section class=" review-item">
                                 <h2 class="review-item__title">${review.title}</h2>
                                 <p class="review-item__description">${review.text}</p>
                                 <div class="saller saller--review">
-                                    <picture><img srcset="${review.author.avatar}"  width="40" alt="user avatar"></picture>
+                                    <picture><img srcset="${review.author.avatar}" data-srcset="${review.author.avatar}" width="40" alt="user avatar"></picture>
                                     <div class="slide__wrapper">
                                     <a href="#" class="saller__name">${review.author.name}</a>
                                     <a href="#" class="saller__text">${review.author.position}</a>

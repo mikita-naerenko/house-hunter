@@ -38,6 +38,7 @@
     padding-top: 1%;
     padding-left: 3%;
     padding-right: 3%;
+    transition: cubic-bezier(0.22, 0.61, 0.36, 1) .5s;
 }
 
 .container__header {
@@ -45,6 +46,7 @@
     background-repeat:no-repeat;
     background-position: -30% -50%, -10% -70%;
     background-size: 45%;
+    padding-bottom: 10vh;
 }
 
 .container__room-tour {

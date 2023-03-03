@@ -129,6 +129,13 @@
         cursor: pointer;
     }
 
+    .button__user--logout {
+        background-color:rgb(171, 167, 167);
+        color: #ffffff;
+        border-radius: 35px;
+        padding: 5px 10px;
+    }
+
     .button__radio {
         font-size: 18px;
         line-height: 28px;

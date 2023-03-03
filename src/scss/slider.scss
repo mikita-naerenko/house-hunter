@@ -189,12 +189,15 @@
     .slider {
         .slider__item--1 {
             transform: translateX(0%);
+            transition: ease-in-out  0.5s;
         }
         .slider__item--2 {
             transform: translateX(100%);
+            transition: ease-in-out  0.5s;
         }
         .slider__item--3 {
             transform: translateX(200%);
+            transition: ease-in-out  0.5s;
         }
     }
     

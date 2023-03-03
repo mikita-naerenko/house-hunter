@@ -30,7 +30,7 @@
                     </li>
                 </ul>
                 <div class="user-login button">
-                <button class="user-login__sign-up button__user button__user--sign-up">Sign up!</button>
+                <button class="user-login__sign-up button__user button__user--sign-up ">Sign up!</button>
                 <button class="user-login__login button__user button__user--login hidden">Login</button>
                 <button class="user-login__logout button__user button__user--logout hidden">Logout</button>
                 </div>
@@ -466,18 +466,64 @@
                 <li class="footer__item"><a href="tel:+880005553535" class="">(671) 555-0110</a></li>
                 <li class="footer__item"><a href="mailto:house-hunter@example.com" class="">info@hounter.com</a></li>
             </ul>
-            
-            
-            
         </div>
       </div>  
     </footer>
     </div>
  </div>
-    <div class="big-photo hidden">
+    <div class="modal big-photo hidden">
         <div class="big-photo__wrapper">
             <img srcset="" alt="" class="big-photo__item">
-            <button class="big-photo__close" type="button"></button>
+            <button class="modal__close" type="button"></button>
+        </div>
+    </div>
+    <!-- <div class="modal user-login  hidden">
+        <div class="user-login__wrapper">
+            <form action="">
+                <fieldset>
+                    <legend>Login</legend>
+                    <label for="user-email"><span>Email:</span>
+                        <input type="email" id="user-email" placeholder="email@example.com">
+                    </label>
+                    <label for="password"><span>Password:</span>
+                        <input type="password" id="password" placeholder="Create a password">
+                    </label>
+                    <label for="user-login-button"><input type="submit" value="Login" id="user-login-button" class="button__user"></label>  
+                        
+                </fieldset>
+
+            </form>
+            <button class="modal__close" class="" type="button"></button>
+        </div>
+    </div> -->
+    <div class="modal user-login user-login--sign-up-form hidden">
+        <div class="user-login__wrapper">
+            <form action="">
+                <fieldset>
+                    <legend>Sign up</legend>
+                    <label for="name"><span>Name:</span> 
+                        <input type="text" id="name" placeholder="Enter your name">
+                    </label>
+                    <label for="user-email"><span>Email:</span>
+                        <input type="email" id="user-email" placeholder="email@example.com">
+                    </label>
+                    <label for="password-create"><span>Create a<br> password:</span>
+                        <input type="password" id="password-create" placeholder="Create a password">
+                    </label>
+                    <label for="password"><span>Repeat <br> password:</span>
+                        <input type="password" id="password-repeat" placeholder="Repeat password">
+                    </label>
+                    <div class="">
+                        <label for="user-signup-button"><input type="submit" value="Sign up" id="user-signup-button" class="button__user"></label> 
+                        <span>or</span>
+                        <label for="user-login-button"><input type="button" value="Login" id="user-login-button" class="button__user"></label> 
+                    </div>
+ 
+                        
+                </fieldset>
+
+            </form>
+            <button class="modal__close" id="modal-close-sign-up" type="button"></button>
         </div>
     </div>
 </body>

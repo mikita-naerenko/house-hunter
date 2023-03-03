@@ -24,32 +24,35 @@
 @import "social.scss";
 @import "show-photo.scss";
 @import "big-photo.scss";
+@import "modal.scss";
+@import "user-login.scss";
 
 body {
     position: relative;
-    // background-color: #f1f1f1;
-    // overflow-x: hidden;
-    // position: relative;
-    // background-image: url('/img/svg/bg-header-1.svg'), url('/img/svg/bg-header-2.svg'),;
-    // background-repeat:no-repeat;
-    // background-position: top left, top left;
-    // background-size: 60%;
-    
-    // &::before {
-    //     content: '';
-    //     width: 50vh;
-    //     height: 50vh;
-    //     position: absolute;
-    //     background-image: url('/img/svg/bg-header-2.svg'), url('/img/svg/bg-header-1.svg');
-    //     background-repeat:no-repeat;
-    //     z-index: -1;
-    //     background-position: -25% -20%, right -20%;
-    //     background-size: 80%;
-    //     top: -10%;
-    //     left: -10%;
-        
-    // }
 
+}
+
+legend {
+    display: table;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    + * {
+        clear: both;
+    }
+}
+
+fieldset {
+    border: 0;
+    padding: 0.01em 0 0 0;
+    margin: 0;
+    min-width: 0;
+}
+
+body:not(:-moz-handler-blocked) fieldset {
+    display: table-cell;
 }
 
 ul,a {
@@ -77,7 +80,7 @@ ul,a {
   }
 
 img {
-    transition: filter 0.5s;
+    transition: 0.5s;
 }
 
 .section--hidden {

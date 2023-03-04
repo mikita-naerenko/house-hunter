@@ -180,7 +180,87 @@
       "type": "villa",
       "modif": "popular"
      }
-    }
+    },
+    {
+      "id": 5,
+      "img": "/img/1242-Oak-Leaf-Ct.jpg 1x, /img/1242-Oak-Leaf-Ct@x2.jpg 2x",
+      "coords": {
+       "lat": 1,
+       "lng": 1
+      },
+      "name": "1242 Oak Leaf Ct",
+      "price": "$ 560.000",
+      "sallerId": "6",
+      "address": "",
+      "category": {
+       "type": "villa",
+       "modif": "best"
+      }
+     },
+     {
+      "id": 6,
+      "img": "/img/1280-East-St.jpg 1x, /img/1280-East-St@x2.jpg 2x",
+      "coords": {
+       "lat": 1,
+       "lng": 1
+      },
+      "name": "1280 East St",
+      "price": "$ 789.000",
+      "sallerId": "7",
+      "address": "",
+      "category": {
+       "type": "house",
+       "modif": "popular"
+      }
+     },
+     {
+      "id": 8,
+      "img": "/img/Fairway-Ct.jpg 1x, /img/Fairway-Ct@x2.jpg 2x",
+      "coords": {
+       "lat": 1,
+       "lng": 1
+      },
+      "name": "Fairway Ct",
+      "price": "$ 1.200.000",
+      "sallerId": "1",
+      "address": "",
+      "category": {
+       "type": "villa",
+       "modif": "popular"
+      }
+     },
+     {
+      "id": 9,
+      "img": "/img/Geneva-Natoional-Ave.jpg 1x, /img/Geneva-Natoional-Ave@x2.jpg 2x",
+      "coords": {
+       "lat": 1,
+       "lng": 1
+      },
+      "name": "Geneva Natoional Ave",
+      "price": "$ 1.200.000",
+      "sallerId": "2",
+      "address": "",
+      "category": {
+       "type": "villa",
+       "modif": "popular"
+      }
+     },
+     {
+      "id": 10,
+      "img": "/img/Shelokum-Dr-Silverton.jpg 1x, /img/Shelokum-Dr-Silverton@x2.jpg 2x",
+      "coords": {
+       "lat": 1,
+       "lng": 1
+      },
+      "name": "Shelokum Dr Silverton",
+      "price": "$ 1.900.000",
+      "sallerId": "3",
+      "address": "",
+      "category": {
+       "type": "villa",
+       "modif": "popular"
+      }
+     }
    ]
   },
   {

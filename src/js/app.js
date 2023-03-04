@@ -284,7 +284,6 @@ const signUpFormSubmit = function(e) {
 
 
     const userLoginFormHandler = function(e){
-        loginButton.removeEventListener('click', userLoginFormHandler);
         e.preventDefault();
         signUpForm.classList.add('hidden');
         const htmlForm = `<div class="modal user-login user-login--login">
@@ -341,10 +340,9 @@ const signUpFormSubmit = function(e) {
         const userPasswordInput = userLoginForm.querySelector('#password');
         userEmailInput.addEventListener('input', userEmailLoginHandler);
         userPasswordInput.addEventListener('input', passwordInputHandler);
+        loginButton.removeEventListener('click', userLoginFormHandler);
         userLoginForm.addEventListener('submit', userLoginFormSubmit);
-        loginFormCloseButton.addEventListener('click', function() {
-            userLoginForm.remove();
-        });
+        loginFormCloseButton.addEventListener('click', () => userLoginForm.remove());
     };
 
     loginButton.addEventListener('click', userLoginFormHandler);

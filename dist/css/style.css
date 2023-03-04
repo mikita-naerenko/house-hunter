@@ -781,6 +781,7 @@ template {
 }
 
 .slider__card {
+  margin-bottom: 10px;
   min-width: 200px;
   padding: 0 10px;
 }
@@ -863,7 +864,6 @@ template {
   padding-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
   scroll-behavior: smooth;
 }
@@ -900,6 +900,7 @@ template {
   display: flex;
   align-items: center;
   padding: 10px 0;
+  width: 90%;
 }
 
 .saller img {
@@ -925,6 +926,7 @@ template {
   font-size: 10px;
   line-height: 12px;
   color: #888B97;
+  overflow-wrap: break-word;
 }
 
 .saller__grade {

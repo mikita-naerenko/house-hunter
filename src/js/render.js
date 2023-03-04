@@ -10,7 +10,7 @@ export const renderProductCard = function(productCardArr) {
        <div class="saller">
            <picture>
            <img srcset="${productItem.saller.avatar}"  width="40" alt=""></picture>
-           <div class="slide__wrapper">
+           <div class="saller__wrapper">
            <a href="#" class="saller__name">${productItem.saller.name}</a>
            <a href="#" class="saller__text">${productItem.saller.address}</a>
            </div>

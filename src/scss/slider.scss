@@ -1,6 +1,7 @@
 
 
 .slider__card {
+    margin-bottom: 10px;
     img {
         display: block;
         border-radius: 24px;
@@ -8,7 +9,12 @@
         
     }
     min-width: 200px;
+    
     padding: 0 10px;
+
+}
+
+.slider__img {
 
 }
 
@@ -107,7 +113,6 @@
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items:center;
     scroll-behavior: smooth;
 }

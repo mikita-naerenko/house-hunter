@@ -14,9 +14,6 @@
 
 }
 
-.slider__img {
-
-}
 
 .slider__card-mod {
     position: relative;
@@ -28,7 +25,7 @@
         width:max-content;
 
         background-color: #FEE2E2;
-        background-image: url('/img/svg/fire-icon.svg');
+        background-image: url('../img/svg/fire-icon.svg');
         background-repeat: no-repeat;
         background-size: 15px 15px;
         background-position: 3px 2px;
@@ -59,7 +56,7 @@
         width:max-content;
         
         background-color: #DBEAFE;
-        background-image: url('/img/svg/ph_house-fill-blue.svg');
+        background-image: url('../img/svg/ph_house-fill-blue.svg');
         background-repeat: no-repeat;
         background-size: 15px 15px;
         background-position: 3px 2px;
@@ -86,7 +83,7 @@
         width:max-content;
         
         background-color: #D1FAE5;
-        background-image: url('/img/svg/wallet-icon.svg');
+        background-image: url('../img/svg/wallet-icon.svg');
         background-repeat: no-repeat;
         background-size: 15px 15px;
         background-position: 4px 2.5px;
@@ -137,20 +134,8 @@
     display: flex;
 }
 
-.slider {
-    // .slider__item--1 {
-    //     transform: translateX(-100%);
-    // }
-    // .slider__item--2 {
-    //     transform: translateX(0%);
-    // }
-    // .slider__item--3 {
-    //     transform: translateX(100%);
-    // }
-}
-
 .slider__button-container {
-    display: flex;
+    display: none;
 }
 
 .slider__toggle-svg--left {
@@ -162,6 +147,36 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+    }
+
+    .slider__card-mod--popular{
+        &:after {
+            background-size: 18px 18px;
+            background-position: 7px 4px;
+            font-size: 16px;
+            line-height: 14px;   
+        }
+    }
+
+    .slider__card-mod--new{
+        &:after {
+            background-size: 18px 18px;
+            background-position: 7px 4px;
+            font-size: 16px;
+            line-height: 14px;   
+        }
+    }
+    .slider__card-mod--best{
+        &:after {
+            background-size: 18px 18px;
+            background-position: 7px 4px;
+            font-size: 16px;
+            line-height: 14px;   
+        }
+    }
+
+    .slider__button-container {
+        display: flex;
     }
 
     .slider__slide-container {

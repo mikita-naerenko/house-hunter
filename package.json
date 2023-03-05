@@ -44,8 +44,12 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "autoconf": "^1.2.0",
     "browser-sync": "^2.27.10",
-    "imagemin": "^8.0.1"
+    "gulp-image": "^6.3.1",
+    "imagemin": "^8.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-svgo": "^10.0.1"
   },
   "author": "",
   "license": "ISC",

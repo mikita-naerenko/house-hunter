@@ -7,7 +7,18 @@ import './nav.js';
 
 import {handleSliderScroll} from './scrollSlider.js';
 
+import * as flsFunctions from "./modules/functions.js";
+    // Code for gulp-webpcss
+    // Without this code snippet gulp-webpcss doesn't work!
+flsFunctions.isWebp();
 
+import Swiper, { Navigation, Pagination } from 'swiper';
+
+const swiper = new Swiper('.swiper', {
+  // configure Swiper to use modules
+  modules: [Navigation, Pagination],
+
+});
 
 
  
@@ -26,10 +37,18 @@ const getUserData = async function() {
 const typeOfProductButtonHandler = function(productCardArr, e) {
     const target = e.target.getAttribute('id');
     const slideContainer = document.querySelector('.slider__slide-container');
+    const allButton = document.querySelector('#all').id;
     if (!target) return;
-    while (slideContainer.firstChild)
-    slideContainer.removeChild(slideContainer.firstChild);
-    renderProductCard(productCardArr.filter(el => el.category.type === target));
+    if (target === allButton) {
+        while (slideContainer.firstChild)
+        slideContainer.removeChild(slideContainer.firstChild);
+        renderProductCard(productCardArr);
+    } else {
+        while (slideContainer.firstChild)
+        slideContainer.removeChild(slideContainer.firstChild);
+        renderProductCard(productCardArr.filter(el => el.category.type === target));
+    }
+
 };
 
 const closeModalHandler = function(closeElement, listenElement){

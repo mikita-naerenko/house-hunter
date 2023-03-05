@@ -18,7 +18,7 @@ return app.gulp.src(app.path.src.scss, { sourcemaps: app.idDev })
         title: "SCSS",
         message: "Error: <%= error.message %>"
     }))))
-    .pipe(app.plugins.replace(/@img\//g, '../img/'))
+    .pipe(app.plugins.replace(/@img\//g, 'img/'))
 .pipe(sass({
   outputStyle: 'expanded'
 }))

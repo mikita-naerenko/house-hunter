@@ -1,15 +1,15 @@
 .cta {
     padding: 10% 5%;
     border-radius: 32px;
-    background-image: url('/img/cta-background.jpg');
+    background-image: url('../img/cta-background.jpg');
 
     background-size: cover;
     background-repeat: no-repeat;
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: $retina-dppx){
-        background-image: url('/img/cta-background@2x.jpg');
+        background-image: url('../img/cta-background@2x.jpg');
     }
     @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: $retina-dppx){
-        background-image: url('/img/cta-background@3x.jpg');
+        background-image: url('../img/cta-background@3x.jpg');
     }
 
 }

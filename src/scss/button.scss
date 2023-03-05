@@ -39,6 +39,13 @@
     }
 }
 
+.main-button--next, .main-button--previous {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-button--next[disabled], .main-button--previous[disabled] {
     
         opacity: 0.5;

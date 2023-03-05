@@ -44,7 +44,7 @@
     position: relative;
 
     &::after {
-        content: url('/img/svg/Vector.svg');
+        content: url('../img/svg/Vector.svg');
         position: absolute;
         right: 6%;
     }

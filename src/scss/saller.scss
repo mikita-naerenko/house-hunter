@@ -32,9 +32,7 @@
     overflow-wrap: break-word;
 }
 
-.saller__wrapper {
-    //    overflow-wrap: break-word; 
-}
+
 
 .saller__grade {
     font-weight: 600;
@@ -46,7 +44,7 @@
     position: relative;
 
     &::before {
-        content: url('/img/svg/star-icon.svg');
+        content: url('../img/svg/star-icon.svg');
         display: block;
         transform: scale(0.5);
         position: absolute;
@@ -129,7 +127,7 @@
         margin-left: 20px;
     
         &::before {
-            content: url('/img/svg/star-icon.svg');
+            content: url('../img/svg/star-icon.svg');
             display: block;
             transform: scale(0.7);
             position: absolute;

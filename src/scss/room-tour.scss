@@ -58,7 +58,7 @@
 
     &.room-tour-description__detail-item--bedrooms {
         &::before {
-            content:url('/img/svg/bed-icon.svg');
+            content:url('../img/svg/bed-icon.svg');
             display: block;
             transform: scale(0.6);
 
@@ -69,7 +69,7 @@
     }
     &.room-tour-description__detail-item--bathrooms {
         &::before {
-            content:url('/img/svg/bath-icon.svg');
+            content:url('../img/svg/bath-icon.svg');
             display: block;
             transform: scale(0.6);
 
@@ -80,7 +80,7 @@
     }
     &.room-tour-description__detail-item--carport {
         &::before {
-            content:url('/img/svg/car-garage-icon.svg');
+            content:url('../img/svg/car-garage-icon.svg');
             display: block;
             transform: scale(0.6);
 
@@ -91,7 +91,7 @@
     }
     &.room-tour-description__detail-item--floors {
         &::before {
-            content:url('/img/svg/floor-icon.svg');
+            content:url('../img/svg/floor-icon.svg');
             display: block;
             transform: scale(0.55);
 
@@ -175,7 +175,7 @@
 
         &.room-tour-description__detail-item--bedrooms {
             &::before {
-                content:url('/img/svg/bed-icon.svg');
+                content:url('../img/svg/bed-icon.svg');
                 transform: scale(0.8);
     
                 top: -7px;
@@ -184,7 +184,7 @@
         }
         &.room-tour-description__detail-item--bathrooms {
             &::before {
-                content:url('/img/svg/bath-icon.svg');
+                content:url('../img/svg/bath-icon.svg');
                 transform: scale(0.8);
     
                 top: -7px;
@@ -193,7 +193,7 @@
         }
         &.room-tour-description__detail-item--carport {
             &::before {
-                content:url('/img/svg/car-garage-icon.svg');
+                content:url('../img/svg/car-garage-icon.svg');
                 transform: scale(0.9);
     
                 top: -7px;
@@ -202,7 +202,7 @@
         }
         &.room-tour-description__detail-item--floors {
             &::before {
-                content:url('/img/svg/floor-icon.svg');
+                content:url('../img/svg/floor-icon.svg');
                 transform: scale(0.85);
     
                 top: -1px;

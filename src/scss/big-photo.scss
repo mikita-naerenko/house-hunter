@@ -24,6 +24,25 @@
     }
 
 }
+@media (orientation: landscape) {
+    .big-photo__wrapper {
+        border-radius: 15px;
+        padding: 1%;
+        background-color:rgba(239, 230, 230, 0.5);
+    
+        position: absolute;
+        width: 50%;
+        height: auto;
+        top: calc(50% - 50%);
+        left: calc(50% - 25%);
+    
+        img {
+            display: block;
+            width: 100%;
+        }
+    
+    }
+}
 
 // .modal__close {
 //     width: 22px;

@@ -322,6 +322,23 @@
             <button class="modal__close" id="modal-close-sign-up" type="button"></button>
         </div>
     </div>
+    <div class="modal user-login user-login--login hidden">
+        <div class="user-login__wrapper">
+            <form action="">
+                <fieldset>
+                    <legend>Login</legend>
+                    <label for="user-email-login"><span>Email:</span>
+                        <input type="email" id="user-email-login" placeholder="email@example.com">
+                    </label>
+                    <label for="password"><span>Password:</span>
+                        <input type="password" id="password" placeholder="Enter your password">
+                    </label>
+                    <label for="user-login-button"><input type="submit" value="Login" id="user-login-button-submit" class="button__user"></label>                
+                </fieldset>
+            </form>
+            <button class="modal__close" id="modal-close-login" type="button"></button>
+        </div>
+    </div>
 </body>
 <script src="js/app.min.js"></script>
 </html>

@@ -2032,10 +2032,10 @@ img {
     padding: 1%;
     background-color: rgba(239, 230, 230, 0.7);
     position: absolute;
-    width: 50%;
+    width: 30%;
     height: auto;
-    top: 30%;
-    left: 25%;
+    top: 20%;
+    left: 30%;
   }
 
   .user-login__wrapper legend {
@@ -2655,29 +2655,6 @@ img {
   .big-photo__wrapper img {
     display: block;
     width: 100%;
-  }
-
-  .user-login {
-    font-size: 14px;
-    line-height: 24px;
-    color: #1B1C57;
-  }
-
-  .user-login__wrapper {
-    border-radius: 15px;
-    padding: 0;
-    background-color: rgba(239, 230, 230, 0.7);
-    position: absolute;
-    width: 70%;
-    height: auto;
-    top: 5%;
-    left: 15%;
-  }
-
-  .user-login--sign-up-form label {
-    font-size: 14px;
-    line-height: 16px;
-    margin-bottom: 0;
   }
 }
 

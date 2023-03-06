@@ -245,84 +245,24 @@ const isValidPassword = (password) => {
 };
 
 
-const submitEmail = (email) => console.log(`Email ${email} submitted`);
-const submitSignUpForm = (userName, email, password) => console.log(`Form has been submitted! Name: ${userName}, Email: ${email}, Password: ${password}`);
 
-const signUpButton = document.querySelector('.user-login__sign-up');
 
-const signUpFormHandler = function (e) {
-    const signUpForm = document.querySelector('.user-login--sign-up-form');
-    const loginButton = document.querySelector('#user-login-button');
-    const signUpFormCloseButton = document.querySelector('#modal-close-sign-up');
-    const userNameInput = signUpForm.querySelector('#name');
-    const userEmailInput = signUpForm.querySelector('#user-email');
-    const userPasswordCreateInput = signUpForm.querySelector('#password-create');
-    const userPasswordRepeatInput = signUpForm.querySelector('#password-repeat');
-    e.preventDefault();
-    signUpForm.classList.remove('hidden');
-    signUpFormCloseButton.addEventListener('click', closeModalHandler.bind(null, signUpForm,signUpFormCloseButton));
 
-    userNameInput.addEventListener('input', function() {
-        const userName = userNameInput.value.trim();
-        userNameInput.setCustomValidity(isValidName(userName) ? '' : `Please enter correct name.`);
-    });
-    userEmailInput.addEventListener('input', function() {
-        const userEmail = userEmailInput.value.trim();
-        userEmailInput.setCustomValidity(isValidEmail(userEmail) ? '' : `Please enter a correct email address`);
 
-    });
-    userPasswordCreateInput.addEventListener('input', function() {
-        const userPasswordCreate = userPasswordCreateInput.value.trim();
-        userPasswordCreateInput.setCustomValidity(isValidPassword(userPasswordCreate) ? '' : `Your password should have a length of 5 to 20 characters and include at least one number and one uppercase letter.`);
-    });
-    userPasswordRepeatInput.addEventListener('input', function() {
-        const userPasswordCreate = userPasswordCreateInput.value.trim();
-        const userPasswordRepeat = userPasswordRepeatInput.value.trim();
-        userPasswordRepeatInput.setCustomValidity(userPasswordCreate === userPasswordRepeat ? '' : `Passwords don't match`);
-    });
-const signUpFormSubmit = function(e) {
-    e.preventDefault();
-    const userName = userNameInput.value.trim();
-    const userEmail = userEmailInput.value.trim();
-    const userPasswordCreate = userPasswordCreateInput.value.trim();
-    const userPasswordRepeat = userPasswordRepeatInput.value.trim();
-    if (isValidName(userName) && isValidEmail(userEmail) && isValidPassword(userPasswordCreate) && userPasswordCreate === userPasswordRepeat){
-        submitSignUpForm(userName,userEmail,userPasswordCreate);
-        userNameInput.value = '';
-        userEmailInput.value = '';
-        userPasswordCreateInput.value = '';
-        userPasswordRepeatInput.value = '';
-        document.querySelector('.user-login--sign-up-form').classList.add('hidden');
-        document.querySelector('.button__user--sign-up').classList.toggle('hidden');
-        document.querySelector('.button__user--logout').classList.toggle('hidden');
-        signUpForm.removeEventListener('submit', signUpFormSubmit);
-    } else {userNameInput.setCustomValidity(`Please make sure that all fields are completed correctly.`)};
-};
 
-    signUpForm.addEventListener('submit', signUpFormSubmit);
+
+
 
 
     const userLoginFormHandler = function(e){
+        const signUpForm = document.querySelector('.user-login--sign-up-form');
+        const loginFormCloseButton = document.querySelector('#modal-close-login');
+        const userLoginForm = document.querySelector('.user-login--login');
+        const userEmailInput = userLoginForm.querySelector('#user-email-login');
+        const userPasswordInput = userLoginForm.querySelector('#password');
         e.preventDefault();
         signUpForm.classList.add('hidden');
-        const htmlForm = `<div class="modal user-login user-login--login">
-                            <div class="user-login__wrapper">
-                                <form action="">
-                                    <fieldset>
-                                        <legend>Login</legend>
-                                        <label for="user-email"><span>Email:</span>
-                                            <input type="email" id="user-email" placeholder="email@example.com">
-                                        </label>
-                                        <label for="password"><span>Password:</span>
-                                            <input type="password" id="password" placeholder="Enter your password">
-                                        </label>
-                                        <label for="user-login-button"><input type="submit" value="Login" id="user-login-button-submit" class="button__user"></label>                
-                                    </fieldset>
-                                </form>
-                                <button class="modal__close" id="modal-close-login" type="button"></button>
-                            </div>
-                        </div>`;
-
+        userLoginForm.classList.remove('hidden');
         const userEmailLoginHandler = function() {
             const userEmail = userEmailInput.value.trim();
 
@@ -345,29 +285,174 @@ const signUpFormSubmit = function(e) {
             e.preventDefault();
             if(isValidEmail(userEmail) && isValidPassword(userPassword)) {
                 console.log(`The user has logged in. ${userEmail}, ${userPassword}`);
-                userLoginForm.remove();
+                // document.querySelector('.button__user--sign-up').classList.toggle('hidden');
+                userPasswordInput.value = '';
+                userEmailInput.value = '';
                 document.querySelector('.button__user--sign-up').classList.toggle('hidden');
                 document.querySelector('.button__user--logout').classList.toggle('hidden');
+                userLoginForm.classList.add('hidden');
                 userLoginForm.removeEventListener('submit', userLoginFormSubmit);
-                loginButton.removeEventListener('click', userLoginFormHandler);
         }};
         
-        document.querySelector('body').insertAdjacentHTML('beforeend', htmlForm );
-        const loginFormCloseButton = document.querySelector('#modal-close-login');
-        const userLoginForm = document.querySelector('.user-login--login');
-        const userEmailInput = userLoginForm.querySelector('#user-email');
-        const userPasswordInput = userLoginForm.querySelector('#password');
+        // document.querySelector('body').insertAdjacentHTML('beforeend', htmlForm );
+        // const loginFormCloseButton = document.querySelector('#modal-close-login');
+        // const userLoginForm = document.querySelector('.user-login--login');
+        // const userEmailInput = userLoginForm.querySelector('#user-email');
+        // const userPasswordInput = userLoginForm.querySelector('#password');
         userEmailInput.addEventListener('input', userEmailLoginHandler);
         userPasswordInput.addEventListener('input', passwordInputHandler);
-        loginButton.removeEventListener('click', userLoginFormHandler);
         userLoginForm.addEventListener('submit', userLoginFormSubmit);
-        loginFormCloseButton.addEventListener('click', () => userLoginForm.remove());
     };
 
+const submitEmail = (email) => console.log(`Email ${email} submitted`);
+const submitSignUpForm = (userName, email, password) => console.log(`Form has been submitted! Name: ${userName}, Email: ${email}, Password: ${password}`);
+
+const signUpButton = document.querySelector('.user-login__sign-up');
+
+const signUpFormHandler = function (e) {
+    const signUpForm = document.querySelector('.user-login--sign-up-form');
+    const loginButton = document.querySelector('#user-login-button');
+    const signUpFormCloseButton = document.querySelector('#modal-close-sign-up');
+    const userNameInput = signUpForm.querySelector('#name');
+    const userEmailInput = signUpForm.querySelector('#user-email');
+    const userPasswordCreateInput = signUpForm.querySelector('#password-create');
+    const userPasswordRepeatInput = signUpForm.querySelector('#password-repeat');
+    e.preventDefault();
+    signUpForm.classList.remove('hidden');
     loginButton.addEventListener('click', userLoginFormHandler);
+    signUpFormCloseButton.addEventListener('click', function(){
+        signUpForm.classList.add('hidden');
+        signUpFormCloseButton.removeEventListener('click', closeModalHandler);
+    });
+    userNameInput.addEventListener('input', function() {
+        const userName = userNameInput.value.trim();
+        userNameInput.setCustomValidity(isValidName(userName) ? '' : `Please enter correct name.`);
+    });
+    userEmailInput.addEventListener('input', function() {
+        const userEmail = userEmailInput.value.trim();
+        userEmailInput.setCustomValidity(isValidEmail(userEmail) ? '' : `Please enter a correct email address`);
+
+    });
+    userPasswordCreateInput.addEventListener('input', function() {
+        const userPasswordCreate = userPasswordCreateInput.value.trim();
+        userPasswordCreateInput.setCustomValidity(isValidPassword(userPasswordCreate) ? '' : `Your password should have a length of 5 to 20 characters and include at least one number and one uppercase letter.`);
+    });
+    userPasswordRepeatInput.addEventListener('input', function() {
+        const userPasswordCreate = userPasswordCreateInput.value.trim();
+        const userPasswordRepeat = userPasswordRepeatInput.value.trim();
+        userPasswordRepeatInput.setCustomValidity(userPasswordCreate === userPasswordRepeat ? '' : `Passwords don't match`);
+    });
+    const signUpFormSubmit = function(e) {
+    e.preventDefault();
+    const userName = userNameInput.value.trim();
+    const userEmail = userEmailInput.value.trim();
+    const userPasswordCreate = userPasswordCreateInput.value.trim();
+    const userPasswordRepeat = userPasswordRepeatInput.value.trim();
+    if (isValidName(userName) && isValidEmail(userEmail) && isValidPassword(userPasswordCreate) && userPasswordCreate === userPasswordRepeat){
+        submitSignUpForm(userName,userEmail,userPasswordCreate);
+        userNameInput.value = '';
+        userEmailInput.value = '';
+        userPasswordCreateInput.value = '';
+        userPasswordRepeatInput.value = '';
+        document.querySelector('.user-login--sign-up-form').classList.add('hidden');
+        document.querySelector('.button__user--sign-up').classList.toggle('hidden');
+        document.querySelector('.button__user--logout').classList.toggle('hidden');
+        signUpForm.removeEventListener('submit', signUpFormSubmit);
+    } else {userNameInput.setCustomValidity(`Please make sure that all fields are completed correctly.`)};
+
+
+    };
+    signUpForm.addEventListener('submit', signUpFormSubmit);
 };
 
 signUpButton.addEventListener('click', signUpFormHandler);
+//     signUpForm.addEventListener('submit', signUpFormSubmit);
+
+
+    // const userLoginFormHandler = function(e){
+    //     e.preventDefault();
+    //     signUpForm.classList.add('hidden');
+    //     loginButton.removeEventListener('click', userLoginFormHandler);
+    //     const htmlForm = `<div class="modal user-login user-login--login">
+    //                         <div class="user-login__wrapper">
+    //                             <form action="">
+    //                                 <fieldset>
+    //                                     <legend>Login</legend>
+    //                                     <label for="user-email"><span>Email:</span>
+    //                                         <input type="email" id="user-email" placeholder="email@example.com">
+    //                                     </label>
+    //                                     <label for="password"><span>Password:</span>
+    //                                         <input type="password" id="password" placeholder="Enter your password">
+    //                                     </label>
+    //                                     <label for="user-login-button"><input type="submit" value="Login" id="user-login-button-submit" class="button__user"></label>                
+    //                                 </fieldset>
+    //                             </form>
+    //                             <button class="modal__close" id="modal-close-login" type="button"></button>
+    //                         </div>
+    //                     </div>`;
+
+    //     const userEmailLoginHandler = function() {
+    //         const userEmail = userEmailInput.value.trim();
+
+    //         userEmailInput.setCustomValidity(isValidEmail(userEmail)
+    //         ? '' 
+    //         : `Please enter a correct email address`);
+    //     };
+
+    //     const passwordInputHandler = function() {
+    //         const userPassword = userPasswordInput.value.trim();
+    //         userPasswordInput.setCustomValidity(isValidPassword(userPassword)
+    //         ? '' 
+    //         : `Your password should have a length of 5 to 20 characters and include 
+    //         at least one number and one uppercase letter.`);
+    //     };
+
+    //     const userLoginFormSubmit = function(e){
+    //         const userPassword = userPasswordInput.value.trim();
+    //         const userEmail = userEmailInput.value.trim();
+    //         e.preventDefault();
+    //         if(isValidEmail(userEmail) && isValidPassword(userPassword)) {
+    //             console.log(`The user has logged in. ${userEmail}, ${userPassword}`);
+    //             userLoginForm.remove();
+    //             document.querySelector('.button__user--sign-up').classList.toggle('hidden');
+    //             document.querySelector('.button__user--logout').classList.toggle('hidden');
+    //             userLoginForm.removeEventListener('submit', userLoginFormSubmit);
+    //             loginButton.removeEventListener('click', userLoginFormHandler);
+    //     }};
+        
+//     //     document.querySelector('body').insertAdjacentHTML('beforeend', htmlForm );
+//     //     const loginFormCloseButton = document.querySelector('#modal-close-login');
+//     //     const userLoginForm = document.querySelector('.user-login--login');
+//     //     const userEmailInput = userLoginForm.querySelector('#user-email');
+//     //     const userPasswordInput = userLoginForm.querySelector('#password');
+//     //     userEmailInput.addEventListener('input', userEmailLoginHandler);
+//     //     userPasswordInput.addEventListener('input', passwordInputHandler);
+//     //     loginButton.removeEventListener('click', userLoginFormHandler);
+//     //     userLoginForm.addEventListener('submit', userLoginFormSubmit);
+//     //     loginFormCloseButton.addEventListener('click', () => {
+//     //         loginButton.removeEventListener('click', userLoginFormHandler);
+//     //         signUpFormCloseButton.removeEventListener('click', userLoginFormHandler);
+//     //         userLoginForm.remove()
+//     //     });
+//     // };
+//     // loginButton.addEventListener('click', userLoginFormHandler);
+//     signUpFormCloseButton.addEventListener('click', function(){
+//         signUpFormCloseButton.removeEventListener('click', userLoginFormHandler);
+//         signUpForm.classList.add('hidden');
+//         signUpFormCloseButton.removeEventListener('click', closeModalHandler);
+//     });
+
+//     // loginButton.addEventListener('click', userLoginFormHandler);
+//     // // signUpFormCloseButton.addEventListener('click', closeModalHandler.bind(null, signUpForm,signUpFormCloseButton));
+//     //     signUpFormCloseButton.addEventListener('click', function(){
+//     //     signUpFormCloseButton.removeEventListener('click', userLoginFormHandler);
+//     //     signUpForm.classList.add('hidden');
+//     //     signUpFormCloseButton.removeEventListener('click', closeModalHandler);
+//     // });
+//     // signUpFormCloseButton.removeEventListener('click', userLoginFormHandler);
+// };
+
+// signUpButton.addEventListener('click', signUpFormHandler);
    
 
 

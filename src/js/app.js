@@ -263,6 +263,10 @@ const isValidPassword = (password) => {
         e.preventDefault();
         signUpForm.classList.add('hidden');
         userLoginForm.classList.remove('hidden');
+        loginFormCloseButton.addEventListener('click', function(){
+            userLoginForm.classList.add('hidden');
+            loginFormCloseButton.removeEventListener('click', closeModalHandler);
+        });
         const userEmailLoginHandler = function() {
             const userEmail = userEmailInput.value.trim();
 
